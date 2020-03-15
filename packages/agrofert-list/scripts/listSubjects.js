@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 
-const { qsm } = require('query-string-manipulator');
+const { qsm, getUrlParams } = require('query-string-manipulator');
 
 const listQueryUrl = 'https://or.justice.cz/ias/ui/rejstrik-$firma'
 const listQueryParams = {
@@ -14,7 +14,7 @@ const listQueryParams = {
   'oddil': '',
   'vlozka': '',
   'soud': '',
-  'polozek': '1',
+  'polozek': '5',
   'typHledani': 'EXACT',
   'jenPlatne': 'PLATNE',
 }
@@ -30,18 +30,24 @@ const LAW_FORM_PARTNERSHIP_GENERAL = 'PARTNERSHIP_GENERAL';
 const LAW_FORM_FOUNDATION = 'FOUNDATION';
 const LAW_FORM_COOPERATIVE = 'COOPERATIVE';
 const LAW_FORM_ENTREPRENEUR = 'ENTREPRENEUR';
+const LAW_FORM_VOLUNTARY_ASSOCIATION = 'VOLUNTARY_ASSOCIATION';
 
 const LAW_FORM_MAP = {
   'a. s.': LAW_FORM_COMPANY_JOINT_STOCK,
   'a.s.': LAW_FORM_COMPANY_JOINT_STOCK,
   'a.s': LAW_FORM_COMPANY_JOINT_STOCK,
   's. r. o.': LAW_FORM_COMPANY_LIMITED,
+  's. r.o.': LAW_FORM_COMPANY_LIMITED,
+  's.r. o.': LAW_FORM_COMPANY_LIMITED,
   's.r.o.': LAW_FORM_COMPANY_LIMITED,
   'v. o. s.': LAW_FORM_PARTNERSHIP_GENERAL,
+  'v. o.s.': LAW_FORM_PARTNERSHIP_GENERAL,
+  'v.o. s.': LAW_FORM_PARTNERSHIP_GENERAL,
   'v.o.s.': LAW_FORM_PARTNERSHIP_GENERAL,
   'Nadace': LAW_FORM_FOUNDATION,
   'družstvo': LAW_FORM_COOPERATIVE,
   'Fyzická osoba - podnikatel': LAW_FORM_ENTREPRENEUR,
+  'Spolek': LAW_FORM_VOLUNTARY_ASSOCIATION,
 }
 
 function filterUnique(item, index, src) {
@@ -75,7 +81,11 @@ function parseResult(query, result) {
     const [,lawFormId] = lawFormResult;
     lawForm = lawFormId;
   } else {
-    const detail = getSubjectDetail(id)
+    const linkNode = filterByText(query, result.find('a'), 'Úplný výpis').first();
+    const linkParams = getUrlParams(linkNode.attr('href'));
+    const subjektIdParam = linkParams.find(param => param.key === 'subjektId');
+    const subjektId = subjektIdParam.value;
+    const detail = getSubjectDetail(subjektId)
     lawForm = detail.lawForm;
   }
   return {
@@ -85,11 +95,12 @@ function parseResult(query, result) {
   }
 }
 
-async function getSubjectDetail(id) {
+async function getSubjectDetail(subjektId) {
+  console.log('detail', subjektId)
   const url = qsm(detailQueryUrl, {
     set: {
       ...detailQueryParams,
-      subjektId: id,
+      subjektId: subjektId,
     }
   });
   const res = await fetch(url);
@@ -105,12 +116,27 @@ async function getSubjectDetail(id) {
 
   return {
     // @TODO: Extract all details
-    id,
     lawForm,
   }
 }
 
+function matchesName(company, name) {
+  if (company.name === name) {
+    return true;
+  }
+
+  return Object.entries(LAW_FORM_MAP)
+    .filter(([,form]) => form === company.lawForm)
+    .map(([pattern]) => pattern)
+    .some(pattern => {
+      const regexStr = `${name},?\ ${pattern}`;
+      const regex = new RegExp(regexStr, 'i');
+      return regex.test(company.name);
+    });
+}
+
 async function listSubject(name) {
+  console.log('list', name)
   const url = qsm(listQueryUrl, {
     set: {
       ...listQueryParams,
@@ -123,8 +149,15 @@ async function listSubject(name) {
   }
   const query = cheerio.load(await res.text());
 
-  const firstItem = query('.search-results ol > li').first();
-  return parseResult(query, query(firstItem));
+  const results = Array.prototype.map.call(
+    query('.search-results ol > li'),
+    item => parseResult(query, query(item)),
+  )
+  const result = results.find(item => matchesName(item, name));
+  if (!result) {
+    throw new Error(`Could not find exact match for "${name}"`);
+  }
+  return result;
 }
 
 async function promiseChunks(array, resolver) {
