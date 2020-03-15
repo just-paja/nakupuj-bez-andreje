@@ -28,10 +28,15 @@ const manifest = {
     "48": mainIcon,
     "128": mainIcon
   },
-  permissions: ["*://*.kosik.cz/*", "*://kosik.cz/*"],
+  permissions: [
+    "*://*.kosik.cz/*",
+    "*://*.rohlik.cz/*",
+    "*://kosik.cz/*",
+    "*://rohlik.cz/*"
+  ],
   content_scripts: [
     {
-      matches: ["https://www.kosik.cz/*"],
+      matches: ["https://www.kosik.cz/*", "https://www.rohlik.cz/*"],
       js: ["main.js"],
       run_at: "document_end"
     }

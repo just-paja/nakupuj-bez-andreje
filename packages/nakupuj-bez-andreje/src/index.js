@@ -8,35 +8,6 @@ const replacementImageUrl =
     ? chrome.extension.getURL(mainIcon)
     : safari.extension.baseURI + mainIcon;
 
-function replaceRohlik() {
-  // Autocomplete
-  replaceImages("img.Whisperer_image");
-  replaceImages(".whisperer-product__img img");
-
-  // Catalog / Cart "Don't forget" / Cart "Help us save ..."
-  replaceImages("img.productCard__img");
-
-  // Favorites / Side cart
-  replaceImages(
-    "img.grocery-image-placeholder",
-    "div.products-table__product",
-    ".products-table__name"
-  );
-
-  // Side cart
-  replaceImages("img.itemImage");
-
-  // Cart - list of purchased items
-  replaceImages("span img.image");
-
-  // Detail
-  replaceImages(
-    "#productDetail .clickable div span img",
-    "#productDetail",
-    ".redirect_link.active"
-  );
-}
-
 function replaceElementImages(node) {
   const images = node.querySelectorAll("img");
   for (const image of images) {
@@ -49,7 +20,7 @@ function replaceElementImages(node) {
   }
 }
 
-function replaceOnKosik(node) {
+function replaceByTextContent(node) {
   if (containsBlacklistedBrand(node.textContent)) {
     replaceElementImages(node);
   }
@@ -103,16 +74,26 @@ function observeAll(selector, callback) {
   );
 }
 
-function initializeKosik() {
-  console.log("initialize kosik");
-  observeAll("body", () => {
-    observeAll(".product-box", replaceOnKosik);
-    observeAll(".basket__product__wrapper", replaceOnKosik);
-  });
+function setupKosik() {
+  if (document.location.href.includes("kosik")) {
+    observeAll("body", () => {
+      observeAll(".product-box", replaceByTextContent);
+      observeAll(".basket__product__wrapper", replaceByTextContent);
+    });
+  }
+}
+
+function setupRohlik() {
+  if (document.location.href.includes("rohlik")) {
+    observeAll("body", () => {
+      observeAll(".productCard__wrapper", replaceByTextContent);
+    });
+  }
 }
 
 function initialize() {
-  initializeKosik();
+  setupKosik();
+  setupRohlik();
 }
 
 initialize();
