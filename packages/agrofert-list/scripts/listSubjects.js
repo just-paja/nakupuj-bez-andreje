@@ -33,17 +33,21 @@ const LAW_FORM_ENTREPRENEUR = 'ENTREPRENEUR';
 const LAW_FORM_VOLUNTARY_ASSOCIATION = 'VOLUNTARY_ASSOCIATION';
 
 const LAW_FORM_MAP = {
-  'a. s.': LAW_FORM_COMPANY_JOINT_STOCK,
-  'a.s.': LAW_FORM_COMPANY_JOINT_STOCK,
-  'a.s': LAW_FORM_COMPANY_JOINT_STOCK,
-  's. r. o.': LAW_FORM_COMPANY_LIMITED,
-  's. r.o.': LAW_FORM_COMPANY_LIMITED,
-  's.r. o.': LAW_FORM_COMPANY_LIMITED,
-  's.r.o.': LAW_FORM_COMPANY_LIMITED,
-  'v. o. s.': LAW_FORM_PARTNERSHIP_GENERAL,
-  'v. o.s.': LAW_FORM_PARTNERSHIP_GENERAL,
-  'v.o. s.': LAW_FORM_PARTNERSHIP_GENERAL,
-  'v.o.s.': LAW_FORM_PARTNERSHIP_GENERAL,
+  'a\\. s\\.': LAW_FORM_COMPANY_JOINT_STOCK,
+  'a\\.s\\.': LAW_FORM_COMPANY_JOINT_STOCK,
+  'a\\.s': LAW_FORM_COMPANY_JOINT_STOCK,
+  'akciová společnost': LAW_FORM_COMPANY_JOINT_STOCK,
+  's\\. r\\. o\\.': LAW_FORM_COMPANY_LIMITED,
+  's\\. r\\.o\\.': LAW_FORM_COMPANY_LIMITED,
+  's\\.r\\. o\\.': LAW_FORM_COMPANY_LIMITED,
+  's\\.r\\.o\\.': LAW_FORM_COMPANY_LIMITED,
+  'spol\\. s r\\. o\\.': LAW_FORM_COMPANY_LIMITED,
+  'spol\\. s r\\.o\\.': LAW_FORM_COMPANY_LIMITED,
+  'společnost s ručením omezeným': LAW_FORM_COMPANY_LIMITED,
+  'v\\. o\\. s\\.': LAW_FORM_PARTNERSHIP_GENERAL,
+  'v\\. o\\.s\\.': LAW_FORM_PARTNERSHIP_GENERAL,
+  'v\\.o\\. s\\.': LAW_FORM_PARTNERSHIP_GENERAL,
+  'v\\.o\\.s\\.': LAW_FORM_PARTNERSHIP_GENERAL,
   'Nadace': LAW_FORM_FOUNDATION,
   'družstvo': LAW_FORM_COOPERATIVE,
   'Fyzická osoba - podnikatel': LAW_FORM_ENTREPRENEUR,
@@ -96,7 +100,7 @@ function parseResult(query, result) {
 }
 
 async function getSubjectDetail(subjektId) {
-  console.log('detail', subjektId)
+  process.stderr.write(`detail, ${subjektId}\n`);
   const url = qsm(detailQueryUrl, {
     set: {
       ...detailQueryParams,
@@ -120,8 +124,13 @@ async function getSubjectDetail(subjektId) {
   }
 }
 
+function escapeRegexp(str) {
+    return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+}
+
 function matchesName(company, name) {
-  if (company.name === name) {
+  const companyName = company.name.replace(/["]/g, '');
+  if (companyName === name) {
     return true;
   }
 
@@ -129,18 +138,18 @@ function matchesName(company, name) {
     .filter(([,form]) => form === company.lawForm)
     .map(([pattern]) => pattern)
     .some(pattern => {
-      const regexStr = `${name},?\ ${pattern}`;
+      const regexStr = `${escapeRegexp(name)},?[\\s]+${pattern}`;
       const regex = new RegExp(regexStr, 'i');
-      return regex.test(company.name);
+      return regex.test(companyName);
     });
 }
 
-async function listSubject(name) {
-  console.log('list', name)
+async function listSubject(brandName) {
+  process.stderr.write(`list, ${brandName}\n`);
   const url = qsm(listQueryUrl, {
     set: {
       ...listQueryParams,
-      nazev: name,
+      nazev: brandName,
     }
   });
   const res = await fetch(url);
@@ -153,11 +162,14 @@ async function listSubject(name) {
     query('.search-results ol > li'),
     item => parseResult(query, query(item)),
   )
-  const result = results.find(item => matchesName(item, name));
+  const result = results.find(item => matchesName(item, brandName));
   if (!result) {
-    throw new Error(`Could not find exact match for "${name}"`);
+    throw new Error(`Could not find exact match for "${brandName}"`);
   }
-  return result;
+  return {
+    ...result,
+    brandName
+  };
 }
 
 async function promiseChunks(array, resolver) {
@@ -174,8 +186,8 @@ async function promiseChunks(array, resolver) {
   return data;
 }
 
-async function listSubjects(subjectList) {
-  return await promiseChunks(subjectList, listSubject);
+async function listSubjects(brandNames) {
+  return await promiseChunks(brandNames, listSubject);
 }
 
 module.exports = {
