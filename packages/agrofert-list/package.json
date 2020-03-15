@@ -23,6 +23,11 @@
   "bugs": {
     "url": "https://github.com/just-paja/agrofert-list/issues"
   },
+  "files": [
+    "index.json",
+    "LICENSE",
+    "README.md"
+  ],
   "homepage": "https://github.com/just-paja/agrofert-list#readme",
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
