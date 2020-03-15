@@ -16,6 +16,10 @@ const agrofertList = require('agrofert-list');
 import agrofertList from 'agrofert-list';
 ```
 
+## Přispějte!
+
+Pokud vám na seznamu něco chybí nebo je-li na seznamu něco co tam nemá být, uvítám Pull request!
+
 ## Specifikace
 
 Viz [schema.js](./schema.js)
