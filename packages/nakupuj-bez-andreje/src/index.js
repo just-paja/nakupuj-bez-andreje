@@ -1,11 +1,12 @@
 const agrofert = require("agrofert-list");
 
 const brandList = agrofert.map(brand => brand.brandName.toLowerCase());
+const mainIcon = "main.png";
 
 const replacementImageUrl =
   typeof chrome != "undefined"
-    ? chrome.extension.getURL("web-bez-andreje.png")
-    : safari.extension.baseURI + "web-bez-andreje.png";
+    ? chrome.extension.getURL(mainIcon)
+    : safari.extension.baseURI + mainIcon;
 
 function replaceRohlik() {
   // Autocomplete

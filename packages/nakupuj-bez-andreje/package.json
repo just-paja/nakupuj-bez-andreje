@@ -1,18 +1,17 @@
 {
-  "name": "web-bez-andreje",
+  "name": "nakupuj-bez-andreje",
   "version": "0.1.0",
   "description": "Rozšíření do prohlížeče, které vás upozorní na produkty od Andreje Babiše",
   "main": "index.js",
   "scripts": {
     "build:webpack": "webpack --config webpack.config.js",
-    "build:manifest": "node scripts/build-manifest.js",
     "build:package": "node scripts/build-package.js",
-    "build": "npm run build:webpack && npm run build:manifest && npm run build:package",
+    "build": "npm run build:webpack && npm run build:package",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/just-paja/web-bez-andreje.git"
+    "url": "git+https://github.com/just-paja/nakupuj-bez-andreje.git"
   },
   "keywords": [
     "andrej",
@@ -28,9 +27,9 @@
   "author": "Pavel Žák <pavel@zak.global>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/just-paja/web-bez-andreje/issues"
+    "url": "https://github.com/just-paja/nakupuj-bez-andreje/issues"
   },
-  "homepage": "https://github.com/just-paja/web-bez-andreje#readme",
+  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
@@ -46,6 +45,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "agrofert-list": "^1.0.2"
+    "agrofert-list": "^1.0.2",
+    "dotenv": "^8.2.0"
   }
 }
