@@ -1,0 +1,40 @@
+{
+  "name": "agrofert-list",
+  "version": "1.0.0",
+  "description": "Easy to consume list of companies that fall under Agrofert holding",
+  "main": "index.json",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/just-paja/agrofert-list.git"
+  },
+  "keywords": [
+    "agrofert",
+    "babiš",
+    "bojkot",
+    "produkt",
+    "seznam",
+    "střet",
+    "zájmů"
+  ],
+  "author": "Pavel Žák <pavel@zak.global>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/just-paja/agrofert-list/issues"
+  },
+  "homepage": "https://github.com/just-paja/agrofert-list#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jest": "^25.1.0",
+    "jest-extended": "^0.11.5",
+    "node-fetch": "^2.6.0",
+    "query-string-manipulator": "^1.2.2"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ]
+  }
+}
