@@ -29,14 +29,20 @@ const manifest = {
     "128": mainIcon,
   },
   permissions: [
+    "*://*.itesco.cz/*",
+    "*://itesco.cz/*",
     "*://*.kosik.cz/*",
-    "*://*.rohlik.cz/*",
     "*://kosik.cz/*",
+    "*://*.rohlik.cz/*",
     "*://rohlik.cz/*",
   ],
   content_scripts: [
     {
-      matches: ["https://www.kosik.cz/*", "https://www.rohlik.cz/*"],
+      matches: [
+        "https://www.kosik.cz/*",
+        "https://www.rohlik.cz/*",
+        "https://nakup.itesco.cz/*",
+      ],
       js: ["main.js"],
       run_at: "document_end",
     },
