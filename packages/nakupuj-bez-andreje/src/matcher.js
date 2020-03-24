@@ -28,7 +28,7 @@ const brandList = agrofert.reduce(
   []
 );
 
-const mainIcon = "main.png";
+const mainIcon = "web-bez-andreje.png";
 
 function getReplacementUrl() {
   if (typeof chrome !== "undefined") {
