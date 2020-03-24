@@ -105,6 +105,8 @@ function setupKosik() {
   if (document.location.href.includes("kosik")) {
     observeAll("body", () => {
       observeAll(".product-box", replaceByTextContent);
+      observeAll(".product-detail", replaceByTextContent);
+      observeAll(".product-item", replaceByTextContent);
       observeAll(".basket__product__wrapper", replaceByTextContent);
     });
   }
