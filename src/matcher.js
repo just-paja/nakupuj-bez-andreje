@@ -4,13 +4,29 @@ function escapeRegexp(str) {
   return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
 }
 
-const brandList = agrofert.map((brand) => ({
-  company: brand.name,
-  name: brand.brandName,
-  pattern: new RegExp(
-    `(\\s|^)${escapeRegexp(brand.brandName.toLowerCase())}(\\s|$)`
-  ),
-}));
+function getPatternFromName(name) {
+  return new RegExp(`(\\s|^)${escapeRegexp(name.toLowerCase())}(\\s|$)`);
+}
+
+const brandList = agrofert.reduce(
+  (aggr, brand) =>
+    aggr
+      .concat([
+        {
+          company: brand.name,
+          name: brand.brandName,
+          pattern: getPatternFromName(brand.brandName),
+        },
+      ])
+      .concat(
+        brand.productNames.map((product) => ({
+          company: brand.name,
+          name: product,
+          pattern: getPatternFromName(product),
+        }))
+      ),
+  []
+);
 
 const mainIcon = "main.png";
 
