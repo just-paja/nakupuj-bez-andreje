@@ -1,8 +1,9 @@
 module.exports = {
+  watchPlugins: ["jest-runner-eslint/watch-fix"],
   projects: [
     {
       displayName: "integration",
-      testMatch: ["<rootDir>/**/__tests__/*.js"]
+      testMatch: ["<rootDir>/**/__tests__/*.js"],
     },
     {
       displayName: "linter",
@@ -11,8 +12,8 @@ module.exports = {
       testPathIgnorePatterns: [
         "<rootDir>/dist",
         "<rootDir>/coverage/",
-        "<rootDir>/node_modules/"
-      ]
-    }
-  ]
+        "<rootDir>/node_modules/",
+      ],
+    },
+  ],
 };

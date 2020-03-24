@@ -4,12 +4,12 @@ function escapeRegexp(str) {
   return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
 }
 
-const brandList = agrofert.map(brand => ({
+const brandList = agrofert.map((brand) => ({
   company: brand.name,
   name: brand.brandName,
   pattern: new RegExp(
     `(\\s|^)${escapeRegexp(brand.brandName.toLowerCase())}(\\s|$)`
-  )
+  ),
 }));
 
 const mainIcon = "main.png";
@@ -47,11 +47,8 @@ function replaceElementImages(node, matchingBrand) {
 }
 
 function matchBlacklistedBrand(str) {
-  const clean = str
-    .replace(/[\s]+/g, " ")
-    .trim()
-    .toLowerCase();
-  return brandList.find(brand => brand.pattern.test(clean)) || null;
+  const clean = str.replace(/[\s]+/g, " ").trim().toLowerCase();
+  return brandList.find((brand) => brand.pattern.test(clean)) || null;
 }
 
 function replaceByTextContent(textSource, contentWrapper) {
@@ -65,7 +62,7 @@ function throttle(callback, node) {
   let mutationTimeout = null;
   return function mutationCallback(mutationList) {
     const shouldAct = mutationList.some(
-      mutation =>
+      (mutation) =>
         mutation.type === "attributes" || mutation.type === "childList"
     );
     if (shouldAct) {
@@ -73,7 +70,7 @@ function throttle(callback, node) {
         clearTimeout(mutationTimeout);
         mutationTimeout = null;
       }
-      mutationTimeout = setTimeout(function() {
+      mutationTimeout = setTimeout(function () {
         callback(node);
       }, 500);
     }
@@ -89,14 +86,14 @@ function observe(node, callback) {
     observer.observe(node, {
       attributes: true,
       childList: true,
-      subtree: true
+      subtree: true,
     });
     callback(node);
   }
 }
 
 function observeAll(selector, callback) {
-  return Array.prototype.map.call(document.querySelectorAll(selector), node =>
+  return Array.prototype.map.call(document.querySelectorAll(selector), (node) =>
     observe(node, callback)
   );
 }
@@ -136,5 +133,5 @@ function initialize() {
 
 module.exports = {
   initialize,
-  matchBlacklistedBrand
+  matchBlacklistedBrand,
 };
