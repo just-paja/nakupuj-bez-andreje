@@ -21,27 +21,27 @@ const manifest = {
   description: package.description,
   version: package.version,
   browser_action: {
-    default_icon: mainIcon
+    default_icon: mainIcon,
   },
   icons: {
     "16": mainIcon,
     "48": mainIcon,
-    "128": mainIcon
+    "128": mainIcon,
   },
   permissions: [
     "*://*.kosik.cz/*",
     "*://*.rohlik.cz/*",
     "*://kosik.cz/*",
-    "*://rohlik.cz/*"
+    "*://rohlik.cz/*",
   ],
   content_scripts: [
     {
       matches: ["https://www.kosik.cz/*", "https://www.rohlik.cz/*"],
       js: ["main.js"],
-      run_at: "document_end"
-    }
+      run_at: "document_end",
+    },
   ],
-  web_accessible_resources: [mainIcon]
+  web_accessible_resources: [mainIcon],
 };
 
 function createManifest() {
@@ -51,7 +51,7 @@ function createManifest() {
 
 async function createPackage() {
   const crx = new ChromeExtension({
-    privateKey: process.env.PACKAGE_KEY
+    privateKey: process.env.PACKAGE_KEY,
   });
   await crx.load(bundlePath);
   const buffer = await crx.pack();
@@ -60,7 +60,7 @@ async function createPackage() {
 }
 
 createManifest();
-createPackage().catch(e => {
+createPackage().catch((e) => {
   console.error(e);
   process.exit(255);
 });

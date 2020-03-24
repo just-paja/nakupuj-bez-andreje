@@ -7,11 +7,11 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
-        use: "babel-loader"
-      }
-    ]
+        use: "babel-loader",
+      },
+    ],
   },
   output: {
-    path: path.resolve(__dirname, "dist", "package")
-  }
+    path: path.resolve(__dirname, "dist", "package"),
+  },
 };
