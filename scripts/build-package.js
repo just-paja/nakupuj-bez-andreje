@@ -17,7 +17,7 @@ const mainIconPath = path.join(bundlePath, mainIcon);
 
 const manifest = {
   manifest_version: 2,
-  name: "Web bez Andreje",
+  name: "Nakupuj bez Andreje",
   description: package.description,
   version: package.version,
   browser_action: {
