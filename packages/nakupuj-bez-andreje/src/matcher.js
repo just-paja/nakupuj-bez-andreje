@@ -125,6 +125,16 @@ function setupKosik() {
   }
 }
 
+function setupTesco() {
+  if (document.location.href.includes("itesco")) {
+    observeAll("body", () => {
+      observeAll(".product-tile", replaceByTextContent);
+      observeAll(".product-details-tile", replaceByTextContent);
+      observeAll(".mini-tile", replaceByTextContent);
+    });
+  }
+}
+
 function setupRohlik() {
   if (document.location.href.includes("rohlik")) {
     function replaceByRohlikContent(selector) {
@@ -145,6 +155,7 @@ function setupRohlik() {
 function initialize() {
   setupKosik();
   setupRohlik();
+  setupTesco();
 }
 
 module.exports = {
