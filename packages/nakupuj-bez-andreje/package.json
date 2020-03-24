@@ -31,12 +31,12 @@
   },
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje#readme",
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
     "crx": "^5.0.1",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
     "jest-runner-eslint": "^0.7.6",
@@ -45,7 +45,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "agrofert-list": "^1.0.2",
+    "agrofert-list": "^1.1.0",
     "dotenv": "^8.2.0"
   }
 }
