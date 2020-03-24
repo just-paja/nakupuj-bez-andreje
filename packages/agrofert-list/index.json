@@ -3,810 +3,945 @@
     "name": "PAPEI, a.s.",
     "id": "44223081",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PAPEI"
+    "brandName": "PAPEI",
+    "productNames": []
   },
   {
     "name": "ASTRATEX s.r.o.",
     "id": "25944355",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ASTRATEX"
+    "brandName": "ASTRATEX",
+    "productNames": []
   },
   {
     "name": "BAUER MEDIA v.o.s.",
     "id": "49709968",
     "lawForm": "PARTNERSHIP_GENERAL",
-    "brandName": "BAUER MEDIA"
+    "brandName": "BAUER MEDIA",
+    "productNames": []
   },
   {
     "name": "Odkolek s.r.o.",
     "id": "08002665",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ODKOLEK"
+    "brandName": "ODKOLEK",
+    "productNames": []
   },
   {
     "name": "DEZA, a.s.",
     "id": "00011835",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "DEZA"
+    "brandName": "DEZA",
+    "productNames": []
   },
   {
     "name": "ANIMO Žatec, a.s.",
     "id": "00044628",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ANIMO Žatec"
+    "brandName": "ANIMO Žatec",
+    "productNames": []
   },
   {
     "name": "ZD Křečhoř a.s.",
     "id": "00103926",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZD Křečhoř"
+    "brandName": "ZD Křečhoř",
+    "productNames": []
   },
   {
     "name": "ZEOS Brnířov a.s.",
     "id": "00115380",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZEOS Brnířov"
+    "brandName": "ZEOS Brnířov",
+    "productNames": []
   },
   {
     "name": "ZEAS Puclice a.s.",
     "id": "00115592",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZEAS Puclice"
+    "brandName": "ZEAS Puclice",
+    "productNames": []
   },
   {
     "name": "Agrobech, s.r.o.",
     "id": "00120502",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Agrobech"
+    "brandName": "Agrobech",
+    "productNames": []
   },
   {
     "name": "ZS Vilémov, a.s.",
     "id": "00123170",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZS Vilémov"
+    "brandName": "ZS Vilémov",
+    "productNames": []
   },
   {
     "name": "Animalco a.s.",
     "id": "00536458",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Animalco"
+    "brandName": "Animalco",
+    "productNames": []
   },
   {
     "name": "AGROTEC a.s.",
     "id": "00544957",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROTEC"
+    "brandName": "AGROTEC",
+    "productNames": []
   },
   {
     "name": "BLUECHEM a.s.",
     "id": "03146341",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "BLUECHEM"
+    "brandName": "BLUECHEM",
+    "productNames": []
   },
   {
     "name": "Online People s.r.o.",
     "id": "03575055",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Online People"
+    "brandName": "Online People",
+    "productNames": []
   },
   {
     "name": "CS CABOT, spol. s r.o.",
     "id": "14612411",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "CS CABOT"
+    "brandName": "CS CABOT",
+    "productNames": []
   },
   {
     "name": "AGF Food Logistics, a.s.",
     "id": "24151114",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGF Food Logistics"
+    "brandName": "AGF Food Logistics",
+    "productNames": []
   },
   {
     "name": "Nadace AGROFERT",
     "id": "24188581",
     "lawForm": "FOUNDATION",
-    "brandName": "Nadace AGROFERT"
+    "brandName": "Nadace AGROFERT",
+    "productNames": []
   },
   {
     "name": "AGROMASS, a.s.",
     "id": "24716677",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROMASS"
+    "brandName": "AGROMASS",
+    "productNames": []
   },
   {
     "name": "Logistics Solution, a.s.",
     "id": "64361594",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Logistics Solution"
+    "brandName": "Logistics Solution",
+    "productNames": []
   },
   {
     "name": "PMU CZ, a.s.",
     "id": "25013165",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PMU CZ"
+    "brandName": "PMU CZ",
+    "productNames": []
   },
   {
     "name": "ACOMWARE s.r.o.",
     "id": "25047965",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ACOMWARE"
+    "brandName": "ACOMWARE",
+    "productNames": []
   },
   {
     "name": "První zemědělská Záhornice, a.s.",
     "id": "25064541",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "První zemědělská Záhornice"
+    "brandName": "První zemědělská Záhornice",
+    "productNames": []
   },
   {
     "name": "AGRO Plchov s.r.o.",
     "id": "25107909",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGRO Plchov"
+    "brandName": "AGRO Plchov",
+    "productNames": []
   },
   {
     "name": "ZEAS Mančice, a.s.",
     "id": "25110012",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZEAS Mančice"
+    "brandName": "ZEAS Mančice",
+    "productNames": []
   },
   {
     "name": "SPV Pelhřimov, a.s.",
     "id": "25157507",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "SPV Pelhřimov"
+    "brandName": "SPV Pelhřimov",
+    "productNames": []
   },
   {
     "name": "Zemědělská společnost Třebívlice a.s.",
     "id": "25195743",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Zemědělská společnost Třebívlice"
+    "brandName": "Zemědělská společnost Třebívlice",
+    "productNames": []
   },
   {
     "name": "ALIMEX NEZVĚSTICE a.s.",
     "id": "25196049",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ALIMEX NEZVĚSTICE"
+    "brandName": "ALIMEX NEZVĚSTICE",
+    "productNames": []
   },
   {
     "name": "ČESKÁ VEJCE FARMS, s.r.o.",
     "id": "25243811",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ČESKÁ VEJCE FARMS"
+    "brandName": "ČESKÁ VEJCE FARMS",
+    "productNames": []
   },
   {
     "name": "\"Čistící stanice osiv Kočí, okres Chrudim, s.r.o.\"",
     "id": "25271423",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Čistící stanice osiv Kočí, okres Chrudim"
+    "brandName": "Čistící stanice osiv Kočí, okres Chrudim",
+    "productNames": []
   },
   {
     "name": "AGRO Přešovice, a.s.",
     "id": "25308068",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGRO Přešovice"
+    "brandName": "AGRO Přešovice",
+    "productNames": []
   },
   {
     "name": "Doubravická, a.s.",
     "id": "25312707",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Doubravická"
+    "brandName": "Doubravická",
+    "productNames": []
   },
   {
     "name": "VSV s.r.o.",
     "id": "62063995",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "VSV"
+    "brandName": "VSV",
+    "productNames": []
   },
   {
     "name": "Vodňanská drůbež, a.s.",
     "id": "25396480",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Vodňanská drůbež"
+    "brandName": "Vodňanská drůbež",
+    "productNames": ["Vodňanská kachna"]
   },
   {
     "name": "ZOS Běsno s.r.o.",
     "id": "25461991",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ZOS Běsno"
+    "brandName": "ZOS Běsno",
+    "productNames": []
   },
   {
     "name": "Ethanol Energy a.s.",
     "id": "25502492",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Ethanol Energy"
+    "brandName": "Ethanol Energy",
+    "productNames": []
   },
   {
     "name": "Mlékárna Olešnice a.s.",
     "id": "48911020",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Mlékárna Olešnice"
+    "brandName": "Mlékárna Olešnice",
+    "productNames": []
   },
   {
     "name": "KMOTR - Masna Kroměříž a.s.",
     "id": "25570765",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "KMOTR - Masna Kroměříž"
+    "brandName": "KMOTR - Masna Kroměříž",
+    "productNames": []
   },
   {
     "name": "AGRO Mikulovice, s.r.o.",
     "id": "25573756",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGRO Mikulovice"
+    "brandName": "AGRO Mikulovice",
+    "productNames": []
   },
   {
     "name": "Krahulík-MASOZÁVOD Krahulčí, a.s.",
     "id": "25586823",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Krahulík-MASOZÁVOD Krahulčí"
+    "brandName": "Krahulík-MASOZÁVOD Krahulčí",
+    "productNames": []
   },
   {
     "name": "Poděbradská blata, a.s.",
     "id": "25618466",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Poděbradská blata"
+    "brandName": "Poděbradská blata",
+    "productNames": []
   },
   {
     "name": "AG AGROPRIM, s.r.o.",
     "id": "25649213",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AG AGROPRIM"
+    "brandName": "AG AGROPRIM",
+    "productNames": []
   },
   {
     "name": "LIN a.s",
     "id": "25720767",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "LIN a.s"
+    "brandName": "LIN a.s",
+    "productNames": []
   },
   {
     "name": "ČESKÁ VEJCE CZ, a.s.",
     "id": "25920901",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ČESKÁ VEJCE CZ"
+    "brandName": "ČESKÁ VEJCE CZ",
+    "productNames": []
   },
   {
     "name": "ZS Vysočina, a.s.",
     "id": "25938266",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZS Vysočina"
+    "brandName": "ZS Vysočina",
+    "productNames": []
   },
   {
     "name": "Wotan Forest, a.s.",
     "id": "26060701",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Wotan Forest"
+    "brandName": "Wotan Forest",
+    "productNames": []
   },
   {
     "name": "RYNAGRO a.s.",
     "id": "26080125",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "RYNAGRO"
+    "brandName": "RYNAGRO",
+    "productNames": []
   },
   {
     "name": "Výkrm Tagrea, s.r.o.",
     "id": "26102463",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Výkrm Tagrea"
+    "brandName": "Výkrm Tagrea",
+    "productNames": []
   },
   {
     "name": "AGROFERT, a.s.",
     "id": "26185610",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROFERT"
+    "brandName": "AGROFERT",
+    "productNames": []
   },
   {
     "name": "AGRI CS a.s.",
     "id": "26243334",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGRI CS"
+    "brandName": "AGRI CS",
+    "productNames": []
   },
   {
     "name": "PREOL, a.s.",
     "id": "26311208",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PREOL"
+    "brandName": "PREOL",
+    "productNames": []
   },
   {
     "name": "Statek Lom s.r.o.",
     "id": "26353521",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Statek Lom"
+    "brandName": "Statek Lom",
+    "productNames": []
   },
   {
     "name": "Stanice O, a.s.",
     "id": "26509911",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Stanice O"
+    "brandName": "Stanice O",
+    "productNames": []
   },
   {
     "name": "PRECHEZA a.s.",
     "id": "26872307",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PRECHEZA"
+    "brandName": "PRECHEZA",
+    "productNames": []
   },
   {
     "name": "Penzion Labská, a.s.",
     "id": "27274462",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Penzion Labská"
+    "brandName": "Penzion Labská",
+    "productNames": []
   },
   {
     "name": "Vodňanské kuře, s.r.o.",
     "id": "27435148",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Vodňanské kuře"
+    "brandName": "Vodňanské kuře",
+    "productNames": []
   },
   {
     "name": "Fatra, a.s.",
     "id": "27465021",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Fatra"
+    "brandName": "Fatra",
+    "productNames": []
   },
   {
     "name": "ZN Agro s.r.o.",
     "id": "27497160",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ZN Agro"
+    "brandName": "ZN Agro",
+    "productNames": []
   },
   {
     "name": "SILO - KRZ s.r.o.",
     "id": "27501281",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "SILO - KRZ"
+    "brandName": "SILO - KRZ",
+    "productNames": []
   },
   {
     "name": "AGROTECHNIKA Polabí, a.s.",
     "id": "27554546",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROTECHNIKA Polabí"
+    "brandName": "AGROTECHNIKA Polabí",
+    "productNames": []
   },
   {
     "name": "AgroZES, spol. s r.o.",
     "id": "27588017",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AgroZES"
+    "brandName": "AgroZES",
+    "productNames": []
   },
   {
     "name": "AGP beton, s.r.o.",
     "id": "27588483",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGP beton"
+    "brandName": "AGP beton",
+    "productNames": []
   },
   {
     "name": "Výkrm Třebíč, s.r.o.",
     "id": "27684067",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Výkrm Třebíč"
+    "brandName": "Výkrm Třebíč",
+    "productNames": []
   },
   {
     "name": "PREOL FOOD, a.s.",
     "id": "27698190",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PREOL FOOD"
+    "brandName": "PREOL FOOD",
+    "productNames": []
   },
   {
     "name": "SADY CZ, s.r.o.",
     "id": "27699293",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "SADY CZ"
+    "brandName": "SADY CZ",
+    "productNames": []
   },
   {
     "name": "RK Náklo, s.r.o.",
     "id": "27705846",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "RK Náklo"
+    "brandName": "RK Náklo",
+    "productNames": []
   },
   {
     "name": "Nový Dvůr Kunovice, a.s.",
     "id": "27731987",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Nový Dvůr Kunovice"
+    "brandName": "Nový Dvůr Kunovice",
+    "productNames": []
   },
   {
     "name": "PROFROST a.s.",
     "id": "27771245",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PROFROST"
+    "brandName": "PROFROST",
+    "productNames": []
   },
   {
     "name": "AGROTECHNIC MORAVIA a.s.",
     "id": "27839834",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROTECHNIC MORAVIA"
+    "brandName": "AGROTECHNIC MORAVIA",
+    "productNames": []
   },
   {
     "name": "LED MULTIMEDIA s.r.o.",
     "id": "28118642",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "LED MULTIMEDIA"
+    "brandName": "LED MULTIMEDIA",
+    "productNames": []
   },
   {
     "name": "Centrální laboratoř, s.r.o.",
     "id": "28137043",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Centrální laboratoř"
+    "brandName": "Centrální laboratoř",
+    "productNames": []
   },
   {
     "name": "AFEED, a.s.",
     "id": "28167813",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AFEED"
+    "brandName": "AFEED",
+    "productNames": []
   },
   {
     "name": "KU uzeniny, s.r.o.",
     "id": "28266561",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "KU uzeniny"
+    "brandName": "KU uzeniny",
+    "productNames": []
   },
   {
     "name": "Centrum organické chemie s.r.o.",
     "id": "28778758",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Centrum organické chemie"
+    "brandName": "Centrum organické chemie",
+    "productNames": []
   },
   {
     "name": "AGRI SYSTEM, s.r.o.",
     "id": "28802641",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGRI SYSTEM"
+    "brandName": "AGRI SYSTEM",
+    "productNames": []
   },
   {
     "name": "AGROCOM HRUŠOVANY spol. s r.o.",
     "id": "40230091",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGROCOM HRUŠOVANY"
+    "brandName": "AGROCOM HRUŠOVANY",
+    "productNames": []
   },
   {
     "name": "ARBO, spol. s r.o.",
     "id": "40522172",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ARBO"
+    "brandName": "ARBO",
+    "productNames": []
   },
   {
     "name": "Pekárna Zelená louka, a.s.",
     "id": "41035895",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Pekárna Zelená louka"
+    "brandName": "Pekárna Zelená louka",
+    "productNames": []
   },
   {
     "name": "AgroZZN, a.s.",
     "id": "45148082",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AgroZZN"
+    "brandName": "AgroZZN",
+    "productNames": []
   },
   {
     "name": "Primagra, a.s.",
     "id": "45148155",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Primagra"
+    "brandName": "Primagra",
+    "productNames": []
   },
   {
     "name": "ZZN Polabí, a.s.",
     "id": "45148210",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZZN Polabí"
+    "brandName": "ZZN Polabí",
+    "productNames": []
   },
   {
     "name": "MAFRA, a.s.",
     "id": "45313351",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "MAFRA"
+    "brandName": "MAFRA",
+    "productNames": []
   },
   {
     "name": "VEJPRNICE ENERGO, s.r.o.",
     "id": "45348294",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "VEJPRNICE ENERGO"
+    "brandName": "VEJPRNICE ENERGO",
+    "productNames": []
   },
   {
     "name": "DRUKO STŘÍŽOV s.r.o.",
     "id": "45348600",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "DRUKO STŘÍŽOV"
+    "brandName": "DRUKO STŘÍŽOV",
+    "productNames": []
   },
   {
     "name": "AGROPODNIK DOMAŽLICE a. s.",
     "id": "45350272",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROPODNIK DOMAŽLICE"
+    "brandName": "AGROPODNIK DOMAŽLICE",
+    "productNames": []
   },
   {
     "name": "RESPO, spol. s r.o.",
     "id": "46981471",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "RESPO"
+    "brandName": "RESPO",
+    "productNames": []
   },
   {
     "name": "První novinová společnost a.s.",
     "id": "45795533",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "První novinová společnost"
+    "brandName": "První novinová společnost",
+    "productNames": []
   },
   {
     "name": "Agrodružstvo Katusice",
     "id": "46353895",
     "lawForm": "COOPERATIVE",
-    "brandName": "Agrodružstvo Katusice"
+    "brandName": "Agrodružstvo Katusice",
+    "productNames": []
   },
   {
     "name": "LIPRA PORK, a.s.",
     "id": "46356118",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "LIPRA PORK"
+    "brandName": "LIPRA PORK",
+    "productNames": []
   },
   {
     "name": "Cerea, a.s.",
     "id": "46504940",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Cerea"
+    "brandName": "Cerea",
+    "productNames": []
   },
   {
     "name": "ZZN Pelhřimov a. s.",
     "id": "46678140",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZZN Pelhřimov"
+    "brandName": "ZZN Pelhřimov",
+    "productNames": []
   },
   {
     "name": "Kostelecké uzeniny a.s.",
     "id": "46900411",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Kostelecké uzeniny"
+    "brandName": "Kostelecké uzeniny",
+    "productNames": []
   },
   {
     "name": "AGROTEC servis s.r.o.",
     "id": "46966757",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGROTEC servis"
+    "brandName": "AGROTEC servis",
+    "productNames": []
   },
   {
     "name": "PENAM, a.s.",
     "id": "46967851",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PENAM"
+    "brandName": "PENAM",
+    "productNames": []
   },
   {
     "name": "AGROPODNIK Hodonín a.s.",
     "id": "46971963",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGROPODNIK Hodonín"
+    "brandName": "AGROPODNIK Hodonín",
+    "productNames": []
   },
   {
     "name": "Farma Holešov s.r.o.",
     "id": "46993851",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Farma Holešov"
+    "brandName": "Farma Holešov",
+    "productNames": []
   },
   {
     "name": "DZV NOVA , a.s.",
     "id": "47048522",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "DZV NOVA "
+    "brandName": "DZV NOVA ",
+    "productNames": []
   },
   {
     "name": "M + A + J   s.r.o.",
     "id": "47287195",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "M + A + J"
+    "brandName": "M + A + J",
+    "productNames": []
   },
   {
     "name": "UNILES, a.s.",
     "id": "47307706",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "UNILES"
+    "brandName": "UNILES",
+    "productNames": []
   },
   {
     "name": "Oseva Agri Chrudim, a.s.",
     "id": "47452471",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Oseva Agri Chrudim"
+    "brandName": "Oseva Agri Chrudim",
+    "productNames": []
   },
   {
     "name": "ZEMPRO Opava, a.s. \n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\tV konkursu",
     "id": "47672978",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZEMPRO Opava"
+    "brandName": "ZEMPRO Opava",
+    "productNames": []
   },
   {
     "name": "KEMIFLOC a.s.",
     "id": "47674695",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "KEMIFLOC"
+    "brandName": "KEMIFLOC",
+    "productNames": []
   },
   {
     "name": "NAVOS, a.s.",
     "id": "47674857",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "NAVOS"
+    "brandName": "NAVOS",
+    "productNames": []
   },
   {
     "name": "OLMA, a.s.",
     "id": "47675730",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "OLMA"
+    "brandName": "OLMA",
+    "productNames": []
   },
   {
     "name": "Zemědělská společnost Blšany s.r.o.",
     "id": "47782455",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "Zemědělská společnost Blšany"
+    "brandName": "Zemědělská společnost Blšany",
+    "productNames": []
   },
   {
     "name": "OSEVA, a.s.",
     "id": "47912430",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "OSEVA"
+    "brandName": "OSEVA",
+    "productNames": []
   },
   {
     "name": "ZEMSPOL, spol. s r.o.",
     "id": "47914424",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "ZEMSPOL"
+    "brandName": "ZEMSPOL",
+    "productNames": []
   },
   {
     "name": "Mlékárna Hlinsko, a.s.",
     "id": "48169188",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Mlékárna Hlinsko"
+    "brandName": "Mlékárna Hlinsko",
+    "productNames": []
   },
   {
     "name": "AGS AGRO České Budějovice a.s.",
     "id": "48244376",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGS AGRO České Budějovice"
+    "brandName": "AGS AGRO České Budějovice",
+    "productNames": []
   },
   {
     "name": "AGRO Jinín a.s.",
     "id": "48245933",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGRO Jinín"
+    "brandName": "AGRO Jinín",
+    "productNames": []
   },
   {
     "name": "UNIVERSAL BANKA, a.s.",
     "id": "48264865",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "UNIVERSAL BANKA"
+    "brandName": "UNIVERSAL BANKA",
+    "productNames": []
   },
   {
     "name": "STATEK BŘEŽANY, spol. s r.o.",
     "id": "48529249",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "STATEK BŘEŽANY"
+    "brandName": "STATEK BŘEŽANY",
+    "productNames": []
   },
   {
     "name": "K V A R T O , spol. s r.o.",
     "id": "48951749",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "K V A R T O "
+    "brandName": "K V A R T O ",
+    "productNames": []
   },
   {
     "name": "Lovochemie, a.s.",
     "id": "49100262",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Lovochemie"
+    "brandName": "Lovochemie",
+    "productNames": []
   },
   {
     "name": "Agrotex spol. s r.o.",
     "id": "40764125",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "AGROTEX"
+    "brandName": "AGROTEX",
+    "productNames": []
   },
   {
     "name": "LONDA spol. s r. o.",
     "id": "49241931",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "LONDA"
+    "brandName": "LONDA",
+    "productNames": []
   },
   {
     "name": "AGRO Jevišovice, a.s.",
     "id": "49455958",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGRO Jevišovice"
+    "brandName": "AGRO Jevišovice",
+    "productNames": []
   },
   {
     "name": "Synthesia, a.s.",
     "id": "60108916",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Synthesia"
+    "brandName": "Synthesia",
+    "productNames": []
   },
   {
     "name": "Výzkumný ústav organických syntéz a.s.",
     "id": "60108975",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Výzkumný ústav organických syntéz"
+    "brandName": "Výzkumný ústav organických syntéz",
+    "productNames": []
   },
   {
     "name": "Zlatý klas a.s.",
     "id": "60192496",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Zlatý klas"
+    "brandName": "Zlatý klas",
+    "productNames": []
   },
   {
     "name": "PODCHŘIBÍ JEŽOV, a.s.",
     "id": "60700378",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PODCHŘIBÍ JEŽOV"
+    "brandName": "PODCHŘIBÍ JEŽOV",
+    "productNames": []
   },
   {
     "name": "Zemědělská akciová společnost Březno",
     "id": "61672700",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Zemědělská akciová společnost Březno"
+    "brandName": "Zemědělská akciová společnost Březno",
+    "productNames": []
   },
   {
     "name": "SCHROM FARMS spol. s r.o.",
     "id": "62301659",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "SCHROM FARMS"
+    "brandName": "SCHROM FARMS",
+    "productNames": []
   },
   {
     "name": "PRVNÍ ŽATECKÁ a.s.",
     "id": "63144549",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "PRVNÍ ŽATECKÁ"
+    "brandName": "PRVNÍ ŽATECKÁ",
+    "productNames": []
   },
   {
     "name": "ZEMOS a.s.",
     "id": "63470381",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZEMOS"
+    "brandName": "ZEMOS",
+    "productNames": []
   },
   {
     "name": "NAVOS FARM TECHNIC  s.r.o.",
     "id": "63489911",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "NAVOS FARM TECHNIC"
+    "brandName": "NAVOS FARM TECHNIC",
+    "productNames": []
   },
   {
     "name": "ZERA, a.s.",
     "id": "63493021",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZERA"
+    "brandName": "ZERA",
+    "productNames": []
   },
   {
     "name": "FARMTEC a.s.",
     "id": "63908522",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "FARMTEC"
+    "brandName": "FARMTEC",
+    "productNames": []
   },
   {
     "name": "TK DEZA Valašské Meziříčí spol. s r.o.",
     "id": "64087247",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "TK DEZA Valašské Meziříčí"
+    "brandName": "TK DEZA Valašské Meziříčí",
+    "productNames": []
   },
   {
     "name": "ZEM, a.s.",
     "id": "64259587",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "ZEM"
+    "brandName": "ZEM",
+    "productNames": []
   },
   {
     "name": "AGRO Vnorovy, a.s.",
     "id": "64508056",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGRO Vnorovy"
+    "brandName": "AGRO Vnorovy",
+    "productNames": []
   },
   {
     "name": "MAVEX AGRO, spol. s r.o.",
     "id": "64834417",
     "lawForm": "COMPANY_LIMITED",
-    "brandName": "MAVEX AGRO"
+    "brandName": "MAVEX AGRO",
+    "productNames": []
   },
   {
     "name": "AgroZZN, a.s.",
     "id": "45148082",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "Agrozzn"
+    "brandName": "Agrozzn",
+    "productNames": []
   },
   {
     "name": "AFEED, a.s.",
     "id": "28167813",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AFEED"
+    "brandName": "AFEED",
+    "productNames": []
   },
   {
     "name": "AGRI CS a.s.",
     "id": "26243334",
     "lawForm": "COMPANY_JOINT_STOCK",
-    "brandName": "AGRI CS"
+    "brandName": "AGRI CS",
+    "productNames": []
   }
 ]
