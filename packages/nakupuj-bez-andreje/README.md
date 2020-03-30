@@ -10,9 +10,9 @@ Rozšíření do konvenčních webových prohlížečů, které pomáhá vyhybat
 
 ## Podpora prohlížečů
 
-* Firefox
-* Chromium
-* Google Chrome
+* [Firefox](https://addons.mozilla.org/cs/firefox/addon/nakupuj-bez-andreje/)
+* [Chromium](https://chrome.google.com/webstore/detail/nakupuj-bez-andreje/jjealpfmifpaeoakfjbafddkhmkbnkmg)
+* [Google Chrome](https://chrome.google.com/webstore/detail/nakupuj-bez-andreje/jjealpfmifpaeoakfjbafddkhmkbnkmg)
 
 ## Snímky obrazovky
 
