@@ -4,8 +4,12 @@ function escapeRegexp(str) {
   return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
 }
 
+const textPadding = `[\\s,\(\)]`;
+
 function getPatternFromName(name) {
-  return new RegExp(`(\\s|^)${escapeRegexp(name.toLowerCase())}(\\s|$)`);
+  return new RegExp(
+    `(^|${textPadding})${escapeRegexp(name.toLowerCase())}($|${textPadding})`
+  );
 }
 
 const brandList = agrofert.reduce(

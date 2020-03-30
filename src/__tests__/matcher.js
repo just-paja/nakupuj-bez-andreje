@@ -54,4 +54,34 @@ describe("matchBlacklistedBrand", () => {
       name: "PENAM",
     });
   });
+
+  it("matches brand inside brackets", () => {
+    expect(matchBlacklistedBrand("(Vodňanská drůbež)")).toMatchObject({
+      name: "Vodňanská drůbež",
+    });
+  });
+
+  it("matches brand touching start of brackets", () => {
+    expect(
+      matchBlacklistedBrand("(Vodňanská drůbež (dodavatel))")
+    ).toMatchObject({
+      name: "Vodňanská drůbež",
+    });
+  });
+
+  it("matches brand touching comma", () => {
+    expect(
+      matchBlacklistedBrand("(Vodňanská drůbež, dodavatel)")
+    ).toMatchObject({
+      name: "Vodňanská drůbež",
+    });
+  });
+
+  it("matches brand touching end of brackets", () => {
+    expect(
+      matchBlacklistedBrand("bez kosti (dodavatel Vodňanská drůbež)")
+    ).toMatchObject({
+      name: "Vodňanská drůbež",
+    });
+  });
 });
