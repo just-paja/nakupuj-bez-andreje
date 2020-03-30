@@ -23,6 +23,8 @@ jobs:
         run: npm test -- --coverage
       - name: Build app
         run: npm run build
+        env:
+          PACKAGE_KEY: ${{ secrets.PACKAGE_KEY }}
       - uses: trmcnvn/firefox-addon@v1
         with:
           uuid: ${{ secrets.FIREFOX_API_UUID }}
@@ -30,3 +32,10 @@ jobs:
           manifest: dist/package/manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
+      - uses: trmcnvn/chrome-addon@v2
+        with:
+          extension: ${{ secrets.CHROME_API_UUID }}
+          zip: dist/nakupuj-bez-andreje.zip
+          client-id: ${{ secrets.CHROME_API_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_API_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
