@@ -47,7 +47,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "agrofert-list": "^1.1.0",
+    "agrofert-list": "^1.1.1",
     "dotenv": "^8.2.0"
   }
 }
