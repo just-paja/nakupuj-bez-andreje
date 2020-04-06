@@ -1,5 +1,10 @@
 name: Continuous delivery
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - '**'
+    tags:
+      - 'v*'
 
 jobs:
   test:
