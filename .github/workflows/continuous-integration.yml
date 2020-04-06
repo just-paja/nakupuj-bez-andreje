@@ -1,5 +1,10 @@
 name: Continuous integration
-on: [push]
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*'
 
 jobs:
   test:
