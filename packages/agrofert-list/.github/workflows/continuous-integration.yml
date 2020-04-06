@@ -1,16 +1,20 @@
 name: Continuous integration
-on: [push]
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*'
 
 jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['13']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
       - uses: actions/cache@v1
         with:
           path: ~/.npm
