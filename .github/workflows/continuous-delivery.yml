@@ -36,4 +36,4 @@ jobs:
           zip: dist/nakupuj-bez-andreje.zip
           client-id: ${{ secrets.CHROME_API_CLIENT_ID }}
           client-secret: ${{ secrets.CHROME_API_CLIENT_SECRET }}
-          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          refresh-token: ${{ secrets.CHROME_API_REFRESH_TOKEN }}
