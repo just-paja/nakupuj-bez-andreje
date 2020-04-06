@@ -1,5 +1,7 @@
-name: Continuous integration
-on: [push]
+name: Continuous delivery
+on:
+  release:
+    types: [published]
 
 jobs:
   test:
@@ -21,3 +23,7 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test -- --coverage
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
