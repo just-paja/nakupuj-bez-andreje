@@ -1,6 +1,6 @@
 {
   "name": "nakupuj-bez-andreje",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Rozšíření do prohlížeče, které vás upozorní na produkty od Andreje Babiše",
   "main": "index.js",
   "scripts": {
