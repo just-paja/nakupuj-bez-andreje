@@ -8,6 +8,7 @@ const archiver = require("archiver");
 const Jimp = require("jimp");
 
 const mainIconName = "web-bez-andreje";
+const packageName = "nakupuj-bez-andreje";
 const iconSizes = [16, 48, 128];
 
 const mainIcon = `${mainIconName}.png`;
@@ -19,8 +20,8 @@ const rootPath = path.resolve(__dirname, "..");
 const mainIconSrc = path.join(rootPath, "icons", "main.png");
 const bundlePath = webpack.output.path;
 const distPath = path.resolve(bundlePath, "..");
-const packagePath = path.join(distPath, `${package.name}.crx`);
-const zipPath = path.join(distPath, `${package.name}.zip`);
+const packagePath = path.join(distPath, `${packageName}.crx`);
+const zipPath = path.join(distPath, `${packageName}.zip`);
 const manifestPath = path.join(bundlePath, "manifest.json");
 const mainIconPath = path.join(bundlePath, mainIcon);
 
@@ -97,7 +98,6 @@ async function createZip() {
 async function compile() {
   await createIcons();
   createManifest();
-  await createPackage();
   await createZip();
 }
 

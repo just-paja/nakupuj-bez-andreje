@@ -2,6 +2,35 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.10.7"
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "archiver": "^3.1.1",
+    "babel-loader": "^8.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "crx": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "jest-extended": "^0.11.5",
+    "jest-runner-eslint": "^0.7.6",
+    "jest-watch-select-projects": "^2.0.0",
+    "jest-watch-typeahead": "^0.5.0",
+    "jimp": "^0.9.6",
+    "jsonschema": "^1.2.5",
+    "lerna": "^3.10.7",
+    "node-fetch": "^2.6.0",
+    "prettier": "^2.0.2",
+    "query-string-manipulator": "^1.2.2",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "agrofert-list": "file:packages/agrofert-list",
+    "browser-extension": "file:packages/browser-extension"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }

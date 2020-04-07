@@ -1,21 +1,21 @@
-name: Continuous integration
+name: Continuous delivery
 on:
   push:
-    branches:
+    branches-ignore:
       - '**'
-    tags-ignore:
+    tags:
       - 'v*'
 
 jobs:
-  test:
-    name: Test
+  publish:
+    name: Publish
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['13']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
+          registry-url: 'https://registry.npmjs.org'
       - uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -26,7 +26,9 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test -- --coverage
-      - name: Build app
-        run: npm run build
+      - name: Build
+        run: lerna run build
+      - name: Publish packages
+        run: lerna publish
         env:
-          PACKAGE_KEY: ${{ secrets.PACKAGE_KEY }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}

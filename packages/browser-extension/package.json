@@ -1,8 +1,9 @@
 {
-  "name": "nakupuj-bez-andreje",
+  "name": "browser-extension",
   "version": "0.2.4",
   "description": "Rozšíření do prohlížeče, které vás upozorní na produkty od Andreje Babiše",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build:webpack": "webpack --config webpack.config.js",
     "build:package": "node scripts/build-package.js",
@@ -29,25 +30,8 @@
   "bugs": {
     "url": "https://github.com/just-paja/nakupuj-bez-andreje/issues"
   },
-  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje#readme",
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "archiver": "^3.1.1",
-    "babel-loader": "^8.1.0",
-    "crx": "^5.0.1",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "jest": "^25.1.0",
-    "jest-runner-eslint": "^0.7.6",
-    "jimp": "^0.9.6",
-    "prettier": "^2.0.2",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
-  },
+  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/browser-extension#readme",
   "dependencies": {
-    "agrofert-list": "^1.1.1",
-    "dotenv": "^8.2.0"
+    "agrofert-list": "file:../agrofert-list"
   }
 }
