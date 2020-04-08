@@ -22,7 +22,7 @@ const mainIconSrc = path.join(rootPath, "icons", "main.png");
 const bundlePath = webpack.output.path;
 const distPath = path.resolve(bundlePath, "..");
 const packagePath = path.join(distPath, `${archiveName}.crx`);
-const zipPath = path.join(distPath, `${archiveName}.zip`);
+const zipPath = path.join(distPath, archiveName);
 const manifestPath = path.join(bundlePath, "manifest.json");
 const mainIconPath = path.join(bundlePath, mainIcon);
 
@@ -79,7 +79,7 @@ async function createPackage() {
   await crx.load(bundlePath);
   const buffer = await crx.pack();
   fs.writeFileSync(packagePath, buffer);
-  process.stderr.write(`Created package in ${packagePath}\n`);
+  process.stdout.write(`Created package in ${packagePath}\n`);
 }
 
 async function createZip() {
@@ -93,7 +93,7 @@ async function createZip() {
     archive.pipe(output);
     archive.finalize();
   });
-  process.stderr.write(`Created package in ${zipPath}\n`);
+  process.stdout.write(`Created package in ${zipPath}\n`);
 }
 
 async function compile() {
