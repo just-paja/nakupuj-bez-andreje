@@ -28,17 +28,17 @@ jobs:
         run: npm test -- --coverage
       - name: Build
         run: ./node_modules/.bin/lerna run build
-        #      - name: Publish packages
-        #        run: ./node_modules/.bin/lerna publish from-git --yes
-        #        env:
-        #          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
-          #      - name: Publish chrome extension
-          #        run: ./node_modules/.bin/lerna run publish:chrome
-          #        env:
-          #          CHROME_API_CLIENT_ID: ${{ secrets.CHROME_API_CLIENT_ID }}
-          #          CHROME_API_CLIENT_SECRET: ${{ secrets.CHROME_API_CLIENT_SECRET }}
-          #          CHROME_API_REFRESH_TOKEN: ${{ secrets.CHROME_API_REFRESH_TOKEN }}
-          #          CHROME_API_UUID: ${{ secrets.CHROME_API_UUID }}
+      - name: Publish packages
+        run: ./node_modules/.bin/lerna publish from-git --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
+      - name: Publish chrome extension
+        run: ./node_modules/.bin/lerna run publish:chrome
+        env:
+          CHROME_API_CLIENT_ID: ${{ secrets.CHROME_API_CLIENT_ID }}
+          CHROME_API_CLIENT_SECRET: ${{ secrets.CHROME_API_CLIENT_SECRET }}
+          CHROME_API_REFRESH_TOKEN: ${{ secrets.CHROME_API_REFRESH_TOKEN }}
+          CHROME_API_UUID: ${{ secrets.CHROME_API_UUID }}
       - name: Publish firefox extension
         run: ./node_modules/.bin/lerna run publish:firefox
         env:
