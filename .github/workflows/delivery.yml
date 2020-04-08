@@ -27,13 +27,13 @@ jobs:
       - name: Run tests
         run: npm test -- --coverage
       - name: Build
-        run: lerna run build
+        run: ./node_modules/.bin/lerna run build
       - name: Publish packages
-        run: lerna publish
+        run: ./node_modules/.bin/lerna publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
       - name: Publish chrome extension
-        run: lerna run publish:chrome
+        run: ./node_modules/.bin/lerna run publish:chrome
         env:
           CHROME_API_CLIENT_ID: ${{ secrets.CHROME_API_CLIENT_ID }}
           CHROME_API_CLIENT_SECRET: ${{ secrets.CHROME_API_CLIENT_SECRET }}

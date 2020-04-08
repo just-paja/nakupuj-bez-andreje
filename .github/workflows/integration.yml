@@ -26,4 +26,4 @@ jobs:
       - name: Run tests
         run: npm test -- --coverage
       - name: Build the package
-        run: lerna run build
+        run: ./node_modules/.bin/lerna run build
