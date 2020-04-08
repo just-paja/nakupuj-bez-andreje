@@ -29,8 +29,5 @@
     "LICENSE",
     "README.md"
   ],
-  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/agrofert-list",
-  "devDependencies": {
-    "chrome-webstore-upload": "^0.2.2"
-  }
+  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/agrofert-list"
 }

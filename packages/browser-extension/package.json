@@ -34,8 +34,5 @@
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/browser-extension#readme",
   "dependencies": {
     "agrofert-list": "file:../agrofert-list"
-  },
-  "devDependencies": {
-    "chrome-webstore-upload": "^0.2.2"
   }
 }
