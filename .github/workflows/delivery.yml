@@ -29,7 +29,7 @@ jobs:
       - name: Build
         run: ./node_modules/.bin/lerna run build
       - name: Publish packages
-        run: ./node_modules/.bin/lerna publish
+        run: ./node_modules/.bin/lerna publish from-git
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
       - name: Publish chrome extension
