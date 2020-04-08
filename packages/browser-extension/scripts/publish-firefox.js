@@ -15,8 +15,14 @@ async function publishFirefoxExtension() {
     });
     console.log(res);
   } catch (e) {
-    console.error(e);
-    process.exit(1);
+    if (e.message === "The extension could not be signed") {
+      console.log(
+        "The extension could not be signed, but it was probably published. Please see the logs. Firefox API is not really clear about this."
+      );
+    } else {
+      console.error(e);
+      process.exit(1);
+    }
   }
 }
 
