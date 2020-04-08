@@ -8,9 +8,10 @@ async function publishFirefoxExtension() {
     const res = await cmd.sign({
       apiKey: process.env.FIREFOX_API_KEY,
       apiSecret: process.env.FIREFOX_API_SECRET,
+      artifactsDir: path.resolve(__dirname, "..", "dist"),
+      channel: "listed",
       id: process.env.FIREFOX_API_UUID,
       sourceDir: path.resolve(__dirname, "..", "dist", "package"),
-      channel: "listed",
     });
     console.log(res);
   } catch (e) {
