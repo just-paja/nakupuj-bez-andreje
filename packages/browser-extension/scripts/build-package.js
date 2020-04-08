@@ -1,3 +1,5 @@
+const { archiveName } = require("../paths");
+
 const config = require("dotenv").config();
 const fs = require("fs");
 const ChromeExtension = require("crx");
@@ -8,7 +10,6 @@ const archiver = require("archiver");
 const Jimp = require("jimp");
 
 const mainIconName = "web-bez-andreje";
-const packageName = "nakupuj-bez-andreje";
 const iconSizes = [16, 48, 128];
 
 const mainIcon = `${mainIconName}.png`;
@@ -20,8 +21,8 @@ const rootPath = path.resolve(__dirname, "..");
 const mainIconSrc = path.join(rootPath, "icons", "main.png");
 const bundlePath = webpack.output.path;
 const distPath = path.resolve(bundlePath, "..");
-const packagePath = path.join(distPath, `${packageName}.crx`);
-const zipPath = path.join(distPath, `${packageName}.zip`);
+const packagePath = path.join(distPath, `${archiveName}.crx`);
+const zipPath = path.join(distPath, `${archiveName}.zip`);
 const manifestPath = path.join(bundlePath, "manifest.json");
 const mainIconPath = path.join(bundlePath, mainIcon);
 

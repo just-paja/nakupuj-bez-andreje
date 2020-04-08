@@ -8,6 +8,7 @@
     "build:webpack": "webpack --config webpack.config.js",
     "build:package": "node scripts/build-package.js",
     "build": "npm run build:webpack && npm run build:package",
+    "publish:chrome": "node scripts/publish-chrome.js",
     "test": "jest"
   },
   "repository": {
@@ -33,5 +34,8 @@
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/browser-extension#readme",
   "dependencies": {
     "agrofert-list": "file:../agrofert-list"
+  },
+  "devDependencies": {
+    "chrome-webstore-upload": "^0.2.2"
   }
 }

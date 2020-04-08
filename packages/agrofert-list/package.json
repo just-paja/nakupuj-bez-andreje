@@ -24,6 +24,13 @@
   "bugs": {
     "url": "https://github.com/just-paja/nakupuj-bez-andreje/issues"
   },
-  "files": ["index.json", "LICENSE", "README.md"],
-  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/agrofert-list"
+  "files": [
+    "index.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/agrofert-list",
+  "devDependencies": {
+    "chrome-webstore-upload": "^0.2.2"
+  }
 }
