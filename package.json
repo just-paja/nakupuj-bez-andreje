@@ -24,6 +24,7 @@
     "node-fetch": "^2.6.0",
     "prettier": "^2.0.2",
     "query-string-manipulator": "^1.2.2",
+    "web-ext": "^4.1.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   },
