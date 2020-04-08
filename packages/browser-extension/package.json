@@ -9,6 +9,7 @@
     "build:package": "node scripts/build-package.js",
     "build": "npm run build:webpack && npm run build:package",
     "publish:chrome": "node scripts/publish-chrome.js",
+    "publish:firefox": "node scripts/publish-firefox.js",
     "test": "jest"
   },
   "repository": {
