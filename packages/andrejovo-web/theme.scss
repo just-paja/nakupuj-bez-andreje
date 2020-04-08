@@ -1,0 +1,11 @@
+$spacing-base: 16px;
+
+$paragraph-max-width: $spacing-base * 28;
+$paragraph-margin-bottom: 0;
+$headings-margin-bottom: 0;
+
+$primary: #6ac200;
+
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_variables.scss";

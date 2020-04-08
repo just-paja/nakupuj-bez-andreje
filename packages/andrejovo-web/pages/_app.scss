@@ -1,0 +1,18 @@
+@import "../theme.scss";
+@import "~bootstrap/scss/bootstrap";
+
+html {
+  min-height: 100%;
+}
+
+html,
+body,
+#__next {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#__next {
+  min-width: $spacing-base * 20;
+}

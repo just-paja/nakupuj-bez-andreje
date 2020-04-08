@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/browser-extension#readme",
   "dependencies": {
-    "agrofert-list": "file:../agrofert-list"
+    "agrofert-list": "file:../agrofert-list",
+    "agrofert-matchmaker": "file:../agrofert-matchmaker"
   }
 }

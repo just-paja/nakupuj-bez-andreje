@@ -1,0 +1,15 @@
+@import "../theme.scss";
+
+.query-form {
+  max-width: $paragraph-max-width;
+  margin: $spacing-base auto 0;
+
+  h1,
+  .form-buttons {
+    text-align: center;
+  }
+
+  fieldset {
+    margin-top: $spacing-base;
+  }
+}

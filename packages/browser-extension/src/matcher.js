@@ -1,37 +1,11 @@
 const agrofert = require("agrofert-list");
+const {
+  createPatternList,
+  getPatternFromName,
+  matchBrand,
+} = require("agrofert-matchmaker");
 
-function escapeRegexp(str) {
-  return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
-}
-
-const textPadding = `[\\s,\(\)]`;
-
-function getPatternFromName(name) {
-  return new RegExp(
-    `(^|${textPadding})${escapeRegexp(name.toLowerCase())}($|${textPadding})`
-  );
-}
-
-const brandList = agrofert.reduce(
-  (aggr, brand) =>
-    aggr
-      .concat([
-        {
-          company: brand.name,
-          name: brand.brandName,
-          pattern: getPatternFromName(brand.brandName),
-        },
-      ])
-      .concat(
-        brand.productNames.map((product) => ({
-          company: brand.name,
-          name: product,
-          pattern: getPatternFromName(product),
-        }))
-      ),
-  []
-);
-
+const brandList = createPatternList(agrofert);
 const mainIcon = "web-bez-andreje.png";
 
 function getReplacementUrl() {
@@ -66,9 +40,8 @@ function replaceElementImages(node, matchingBrand) {
   }
 }
 
-function matchBlacklistedBrand(str) {
-  const clean = str.replace(/[\s]+/g, " ").trim().toLowerCase();
-  return brandList.find((brand) => brand.pattern.test(clean)) || null;
+function matchBlacklistedBrand(text) {
+  return matchBrand(brandList, text);
 }
 
 function replaceByTextContent(textSource, contentWrapper) {
