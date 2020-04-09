@@ -1,0 +1,41 @@
+@import "../theme.scss";
+
+.matching-brand {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: $spacing-base * 2;
+
+  .match-warning {
+    font-size: $font-size-base * 3/2;
+    color: $danger;
+  }
+
+  .match-bubble {
+    align-items: center;
+    background: $danger;
+    border: $spacing-base solid $danger;
+    border-radius: $spacing-base * 10;
+    box-sizing: border-box;
+    display: flex;
+    height: $spacing-base * 20;
+    justify-content: center;
+    margin: $spacing-base 0;
+    overflow: hidden;
+    width: $spacing-base * 20;
+  }
+
+  .avatar-line {
+    background: $white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: $spacing-base;
+
+    img {
+      max-height: $spacing-base * 4;
+    }
+  }
+}

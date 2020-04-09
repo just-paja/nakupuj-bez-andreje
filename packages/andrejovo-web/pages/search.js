@@ -2,13 +2,21 @@ import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Router from "next/router";
 
-function Search({ query }) {
-  const { q } = query;
+import { Clean } from "../components/Clean";
+import { matchBlacklistedBrand } from "../db";
+import { MatchingBrand } from "../components/MatchingBrand";
+import { QueryFormHeader } from "../components/QueryFormHeader";
 
+function Search({ brand, query }) {
+  const { q } = query;
   return (
-    <Container as="main" className="home-page">
-      Search {q}
-    </Container>
+    <>
+      <QueryFormHeader q={q} />
+      <Container as="main">
+        <h1 className="text-center">"{q}" v Agrofertu</h1>
+        {brand ? <MatchingBrand brand={brand} /> : <Clean />}
+      </Container>
+    </>
   );
 }
 
@@ -20,7 +28,8 @@ Search.getInitialProps = function ({ query, res }) {
       res.end();
     }
   }
-  return { query };
+  const match = matchBlacklistedBrand(q);
+  return { brand: match && match.companyRef, query };
 };
 
 export default Search;

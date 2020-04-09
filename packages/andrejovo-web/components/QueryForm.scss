@@ -13,3 +13,17 @@
     margin-top: $spacing-base;
   }
 }
+
+.query-form-inline {
+  background: $primary;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  .form-group {
+    margin: 0 $spacing-base;
+    flex-grow: 1;
+  }
+}

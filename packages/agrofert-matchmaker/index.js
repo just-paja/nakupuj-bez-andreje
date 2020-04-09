@@ -21,6 +21,7 @@ function createPatternList(brandList) {
       aggr
         .concat([
           {
+            companyRef: brand,
             company: brand.name,
             name: brand.brandName,
             pattern: getPatternFromName(brand.brandName)
@@ -28,6 +29,7 @@ function createPatternList(brandList) {
         ])
         .concat(
           brand.productNames.map(product => ({
+            companyRef: brand,
             company: brand.name,
             name: product,
             pattern: getPatternFromName(product)
