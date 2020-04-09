@@ -32,9 +32,8 @@
   "bugs": {
     "url": "https://github.com/just-paja/nakupuj-bez-andreje/issues"
   },
-  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/packages/browser-extension#readme",
+  "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/tree/master/packages/browser-extension#readme",
   "dependencies": {
-    "agrofert-list": "file:../agrofert-list",
-    "agrofert-matchmaker": "file:../agrofert-matchmaker"
+    "agrofert-list": "file:../agrofert-list"
   }
 }

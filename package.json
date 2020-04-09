@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "agrofert-list": "file:packages/agrofert-list",
-    "agrofert-matchmaker": "file:packages/agrofert-matchmaker",
     "andrejovo-web": "file:packages/andrejovo-web",
     "browser-extension": "file:packages/browser-extension"
   },

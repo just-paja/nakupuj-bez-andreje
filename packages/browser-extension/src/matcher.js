@@ -1,9 +1,5 @@
 const agrofert = require("agrofert-list");
-const {
-  createPatternList,
-  getPatternFromName,
-  matchBrand,
-} = require("agrofert-matchmaker");
+const { createPatternList, matchBrand } = require("agrofert-list/matcher");
 
 const brandList = createPatternList(agrofert);
 const mainIcon = "web-bez-andreje.png";
