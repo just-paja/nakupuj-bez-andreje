@@ -1,6 +1,6 @@
 {
   "name": "andrejovo-web",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,5 +17,11 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "16.13.1"
   },
-  "files": [".next", "lib", "next.config.js", "public", "package-lock.json"]
+  "files": [
+    ".next",
+    "lib",
+    "next.config.js",
+    "public",
+    "package-lock.json"
+  ]
 }
