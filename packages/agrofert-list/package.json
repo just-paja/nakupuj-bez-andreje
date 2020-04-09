@@ -24,6 +24,11 @@
   "bugs": {
     "url": "https://github.com/just-paja/nakupuj-bez-andreje/issues"
   },
-  "files": ["index.json", "matcher.js", "LICENSE", "README.md"],
+  "files": [
+    "index.json",
+    "matcher.js",
+    "LICENSE",
+    "README.md"
+  ],
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/tree/master/packages/agrofert-list#readme"
 }
