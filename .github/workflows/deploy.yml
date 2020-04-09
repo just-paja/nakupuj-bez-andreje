@@ -1,0 +1,53 @@
+name: Continuous deployment
+on:
+  push:
+    branches:
+      - 'master'
+    tags:
+      - 'v*'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
+          registry-url: 'https://registry.npmjs.org'
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+      - run: npm test -- --coverage
+      - run: ./node_modules/.bin/lerna run build --scope andrejovo-web
+      - name: Install ansible
+        run: |
+          pip install ansible
+          ansible-galaxy install -r ansible-requirements.yml
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PRODUCTION_WEBSITE_SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
+      - name: Deploy to Production
+        env:
+          DEPLOY_HOST: ${{ secrets.PRODUCTION_WEBSITE_DEPLOY_HOST }}
+          NODE_ENV: "production"
+          NODE_PORT: ${{ secrets.PRODUCTION_WEBSITE_NODE_PORT }}
+          NODE_SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
+          NODE_PROJECT_ENVIRONMENT: "production"
+          NODE_ENV_CONFIG: "NODE_GA_CODE=${{ secrets.PRODUCTION_WEBSITE_NODE_GA_CODE}} ${{ secrets.PRODUCTION_WEBSITE_NODE_ENV_CONFIG}}"
+        run: |
+          cd ./packages/andrejovo-web
+          npm install
+          npm pack
+          echo -e "[web]\n$DEPLOY_HOST" > inventory.yml
+          ansible-playbook deploy.yml -i inventory.yml

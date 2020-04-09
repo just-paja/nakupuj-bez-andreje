@@ -5,16 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $NODE_PORT"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "agrofert-list": "file:../agrofert-list",
+    "agrofert-list": "^2.0.7",
     "bootstrap": "^4.4.1",
     "next": "9.3.4",
     "node-sass": "^4.13.1",
     "react": "16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "16.13.1"
-  }
+  },
+  "files": [".next", "lib", "next.config.js", "public", "package-lock.json"]
 }
