@@ -9,7 +9,7 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Je to Andrejovo?</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Component {...pageProps} />
       <Footer />
