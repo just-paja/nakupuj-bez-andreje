@@ -1,6 +1,7 @@
 @import "../theme.scss";
 
 .query-form {
+  min-width: $spacing-base * 18;
   max-width: $paragraph-max-width;
   margin: $spacing-base auto 0;
 
@@ -10,7 +11,13 @@
   }
 
   fieldset {
+    display: flex;
+    width: 100%;
     margin-top: $spacing-base;
+  }
+
+  .form-group {
+    flex-grow: 1;
   }
 }
 

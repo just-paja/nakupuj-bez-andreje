@@ -15,15 +15,11 @@ export function QueryForm() {
             type="text"
             placeholder="Např. Penam toustový chléb"
           />
-          <Form.Text className="text-muted">
-            Můžete zadat jakýkoliv text. Vyhledavač hledá v produktových jménech
-            odkazy na značky a společnosti holdingu Agrofert.
-          </Form.Text>
         </Form.Group>
       </fieldset>
       <div className="form-buttons">
         <Button type="submit" size="lg">
-          Hledat v agrofertimpériu
+          Hledat v impériu
         </Button>
       </div>
     </Form>
