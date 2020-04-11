@@ -1,8 +1,14 @@
 import Head from "next/head";
+import getConfig from "next/config";
+import Router from "next/router";
+import withGA from "next-ga";
 
 import { Footer } from "../components/Footer";
 
 import "./_app.scss";
+
+const { publicRuntimeConfig } = getConfig();
+const { GA_CODE } = publicRuntimeConfig;
 
 function App({ Component, pageProps }) {
   return (
@@ -17,4 +23,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default App;
+export default withGA(GA_CODE, Router)(App);
