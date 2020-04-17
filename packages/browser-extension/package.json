@@ -1,6 +1,6 @@
 {
   "name": "browser-extension",
-  "version": "2.1.0",
+  "version": "2.1.3",
   "description": "Rozšíření do prohlížeče, které vás upozorní na produkty od Andreje Babiše",
   "main": "index.js",
   "private": true,
