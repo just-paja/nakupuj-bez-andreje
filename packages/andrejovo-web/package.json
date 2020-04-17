@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "agrofert-list": "^2.1.3",
+    "agrofert-list": "file:../agrofert-list",
     "bootstrap": "^4.4.1",
     "next": "9.3.4",
     "next-ga": "^2.3.4",
@@ -23,6 +23,7 @@
     "lib",
     "next.config.js",
     "public",
-    "package-lock.json"
+    "package-lock.json",
+    "node_deps"
   ]
 }

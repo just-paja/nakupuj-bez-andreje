@@ -4,14 +4,15 @@ RUN apk add --update nodejs npm
 
 WORKDIR /usr/src/app
 
-COPY package*.json .
-COPY .next .next
-COPY public public
-COPY next.config.js .
-
-RUN npm ci --only=production
-
 ENV NODE_PORT=3000
-EXPOSE 3000
+ENV NODE_ENV=production
+
+ADD andrejovo-web-*.tgz .
+ 
+WORKDIR /usr/src/app/package
+
+RUN npm ci --only=production --no-optional
+
+EXPOSE $NODE_PORT
 
 CMD [ "npm", "run", "start" ]
