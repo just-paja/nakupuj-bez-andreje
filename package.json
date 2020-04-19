@@ -22,6 +22,7 @@
     "jimp": "^0.9.6",
     "jsonschema": "^1.2.5",
     "lerna": "^3.20.2",
+    "lerna-isolate": "^0.1.1",
     "node-fetch": "^2.6.0",
     "prettier": "^2.0.2",
     "query-string-manipulator": "^1.2.2",
