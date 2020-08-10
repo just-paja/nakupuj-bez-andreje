@@ -2,7 +2,7 @@ name: Continuous deployment
 on:
   push:
     branches-ignore:
-      - 'dev'
+      - '**'
     tags:
       - 'v*'
 
