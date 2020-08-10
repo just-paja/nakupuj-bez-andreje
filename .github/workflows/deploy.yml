@@ -2,7 +2,7 @@ name: Continuous deployment
 on:
   push:
     branches-ignore:
-      - '**'
+      - 'dev'
     tags:
       - 'v*'
 
@@ -27,11 +27,19 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm ci
       - run: npm test -- --coverage
-      - run: ./node_modules/.bin/lerna run build --scope andrejovo-web
-      - name: Install ansible
-        run: |
-          pip install ansible
-          ansible-galaxy install -r ansible-requirements.yml
+      - run: npm run build-website
+      - uses: ansible/ansible-lint-action@master
+        with:
+          targets: |
+            packages/andrejovo-web/deploy.yml
+      - uses: docker-practice/actions-setup-docker@0.0.1
+        with:
+          docker_version: 19
+          docker_channel: stable
+      - name: Install docker
+        run: sudo apt-get -y install python-docker python3-docker
+      - name: Install ansible deps
+        run: ansible-galaxy install -r ansible-requirements.yml
       - uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.PRODUCTION_WEBSITE_SSH_KEY }}
@@ -44,7 +52,5 @@ jobs:
           GA_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GA_CODE}}
         run: |
           cd ./packages/andrejovo-web
-          npm install
-          npm pack
           echo -e "[web]\n${{ secrets.PRODUCTION_WEBSITE_DEPLOY_HOST }}\n" > inventory.yml
           ansible-playbook deploy.yml -i inventory.yml

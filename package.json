@@ -36,6 +36,7 @@
     "browser-extension": "file:packages/browser-extension"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build-website": "lerna run build --scope andrejovo-web && lerna-isolate bundle andrejovo-web"
   }
 }
