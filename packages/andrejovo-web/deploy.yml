@@ -1,13 +1,13 @@
 ---
 - name: Deploy to AWS
   hosts: web
-  vars:
-    node_project_id: 'cz-andrejovo'
-    node_project_environment: '{{ lookup("env", "NODE_PROJECT_ENVIRONMENT") }}'
-
   roles:
-    - role: practical-ansible.nginx_node
+    - role: practical-ansible.nginx_docker
+      project_name: cz-andrejovo
+      project_environment: '{{ lookup("env", "PROJECT_ENVIRONMENT") }}'
+      env:
+        NODE_GA_CODE: '{{ lookup("env", "NODE_GA_CODE") }}'
     - role: practical-ansible.nginx-redirect
-      nginx_redirect_project_name: cz-andrejovo
-      nginx_redirect_server_name: andrejovo.cz www.andrejovo.cz
-      nginx_redirect_destination_domain: '{{ lookup("env", "NODE_SERVER_NAME") }}'
+      project_name: cz-andrejovo-redirects
+      server_names: www.andrejovo.cz
+      destination_domain: '{{ lookup("env", "SERVER_NAME") }}'

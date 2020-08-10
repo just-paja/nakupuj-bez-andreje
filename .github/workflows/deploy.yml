@@ -39,15 +39,12 @@ jobs:
           known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
       - name: Deploy to Production
         env:
-          DEPLOY_HOST: ${{ secrets.PRODUCTION_WEBSITE_DEPLOY_HOST }}
-          NODE_ENV: "production"
-          NODE_PORT: ${{ secrets.PRODUCTION_WEBSITE_NODE_PORT }}
-          NODE_SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
-          NODE_PROJECT_ENVIRONMENT: "production"
-          NODE_ENV_CONFIG: "NODE_GA_CODE=${{ secrets.PRODUCTION_WEBSITE_NODE_GA_CODE}} ${{ secrets.PRODUCTION_WEBSITE_NODE_ENV_CONFIG}}"
+          SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
+          PROJECT_ENVIRONMENT: production
+          GA_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GA_CODE}}
         run: |
           cd ./packages/andrejovo-web
           npm install
           npm pack
-          echo -e "[web]\n$DEPLOY_HOST" > inventory.yml
+          echo -e "[web]\n${{ secrets.PRODUCTION_WEBSITE_DEPLOY_HOST }}\n" > inventory.yml
           ansible-playbook deploy.yml -i inventory.yml
