@@ -1,7 +1,7 @@
 const path = require("path");
 
 const { archiveName } = require("../paths");
-const { cmd } = require("web-ext").default;
+const { cmd } = require("web-ext");
 
 async function publishFirefoxExtension() {
   try {
