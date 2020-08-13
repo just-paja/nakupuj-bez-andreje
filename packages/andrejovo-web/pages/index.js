@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Container from "react-bootstrap/Container";
 
-import { QueryForm } from "../components/QueryForm";
 import { Banner } from "../components/Banner";
+import { ExtensionPromo } from "../components/ExtensionPromo";
+import { QueryForm } from "../components/QueryForm";
 
 import "./index.scss";
 
@@ -17,6 +18,7 @@ const Home = () => (
     </Head>
     <Banner />
     <QueryForm />
+    <ExtensionPromo />
   </Container>
 );
 

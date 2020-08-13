@@ -1,0 +1,35 @@
+@import "../theme.scss";
+
+.extension-promo {
+  min-width: $spacing-base * 18;
+  max-width: $paragraph-max-width;
+  margin: $spacing-base auto 0;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  .browsers {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .browser {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    margin: $spacing-base / 2;
+  }
+
+  .firefox {
+    background-image: url(/firefox.png);
+  }
+
+  .chrome {
+    background-image: url(/chrome.png);
+  }
+}
