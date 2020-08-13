@@ -98,6 +98,14 @@ function setupKosik() {
   }
 }
 
+function setupMakro() {
+  if (document.location.href.includes("makro.cz")) {
+    observeAll("body", () => {
+      observeAll(".product-incart", replaceByTextContent);
+    })
+  }
+}
+
 function setupTesco() {
   if (document.location.href.includes("itesco")) {
     observeAll("body", () => {
@@ -127,6 +135,7 @@ function setupRohlik() {
 
 function initialize() {
   setupKosik();
+  setupMakro();
   setupRohlik();
   setupTesco();
 }

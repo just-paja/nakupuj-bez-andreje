@@ -45,6 +45,7 @@ function createManifest() {
       "*://kosik.cz/*",
       "*://*.rohlik.cz/*",
       "*://rohlik.cz/*",
+      "*://*.makro.cz/*",
     ],
     content_scripts: [
       {
@@ -52,6 +53,7 @@ function createManifest() {
           "https://www.kosik.cz/*",
           "https://www.rohlik.cz/*",
           "https://nakup.itesco.cz/*",
+          "https://sortiment.makro.cz/*",
         ],
         js: ["main.js"],
         run_at: "document_end",
