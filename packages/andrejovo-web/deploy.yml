@@ -9,7 +9,7 @@
       admin_email: pavel@zak.global
       become: true
       env:
-        NODE_GA_CODE: '{{ lookup("env", "NODE_GA_CODE") }}'
+        NODE_GTM_CODE: '{{ lookup("env", "NODE_GTM_CODE") }}'
 - name: Deploy redirects
   hosts: web
   roles:

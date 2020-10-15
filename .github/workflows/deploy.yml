@@ -49,7 +49,7 @@ jobs:
         env:
           SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
           PROJECT_ENVIRONMENT: production
-          GA_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GA_CODE}}
+          NODE_GTM_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GTM_CODE}}
         run: |
           cd ./packages/andrejovo-web
           echo -e "[web]\n${{ secrets.PRODUCTION_WEBSITE_DEPLOY_HOST }}\n" > inventory.yml
