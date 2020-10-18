@@ -27,7 +27,10 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm ci
       - run: npm test -- --coverage
-      - run: npm run build-website
+      - name: Build website
+        env:
+          GTM_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GTM_CODE}}
+        run: npm run build-website
       - uses: ansible/ansible-lint-action@master
         with:
           targets: |

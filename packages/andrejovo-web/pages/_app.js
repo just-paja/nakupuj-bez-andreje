@@ -6,10 +6,11 @@ import { Footer } from "../components/Footer";
 
 import "./_app.scss";
 
-const { publicRuntimeConfig } = getConfig();
-const { GTM_CODE } = publicRuntimeConfig;
 
-function renderGtm() {
+function Gtm() {
+  const config = getConfig();
+  const { publicRuntimeConfig } = config
+  const { GTM_CODE } = publicRuntimeConfig;
   if (!GTM_CODE) {
     return null
   }
@@ -21,7 +22,7 @@ function renderGtm() {
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','${GTM_CODE}');`
   }
-  return <script dangerouslySetInnerHTML={innerHTML} />
+  return <Head><script dangerouslySetInnerHTML={innerHTML} /></Head>
 }
 
 function App({ Component, pageProps }) {
@@ -30,8 +31,8 @@ function App({ Component, pageProps }) {
       <Head>
         <title>Je to Andrejovo?</title>
         <link rel="icon" href="/favicon.png" />
-        {renderGtm()}
       </Head>
+      <Gtm />
       <Component {...pageProps} />
       <Footer />
     </>

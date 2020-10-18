@@ -22,6 +22,7 @@
     ".next",
     "lib",
     "next.config.js",
+    "pages",
     "public",
     "package-lock.json",
     "node_deps"
