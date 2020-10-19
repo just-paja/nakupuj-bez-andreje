@@ -17,15 +17,8 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import {Reader} from './Reader'
-import {ProductResults} from './ProductResults';
+import {Reader} from './components/Reader'
+import {ProductResults} from './components/ProductResults';
 
 function App () {
   const [code, setCode] = React.useState(null)
