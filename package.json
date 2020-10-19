@@ -33,7 +33,8 @@
   "dependencies": {
     "agrofert-list": "file:packages/agrofert-list",
     "andrejovo-web": "file:packages/andrejovo-web",
-    "browser-extension": "file:packages/browser-extension"
+    "browser-extension": "file:packages/browser-extension",
+    "mobile-app": "file:packages/mobile-app"
   },
   "scripts": {
     "test": "jest",
