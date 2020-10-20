@@ -20,6 +20,10 @@ module.exports = {
         type: "string",
         description: "IČO"
       },
+      barcodePrefix: {
+        type: "string",
+        description: "Global Company Prefix",
+      },  
       lawForm: {
         type: "string",
         description: "Právní forma",

@@ -220,6 +220,7 @@
     "name": "AGROTEC a.s.",
     "id": "00544957",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859405313",
     "brandName": "AGROTEC",
     "productNames": []
   },
@@ -291,6 +292,7 @@
     "id": "00536458",
     "lawForm": "COMPANY_JOINT_STOCK",
     "brandName": "Animalco",
+    "barcodePrefix": "859404274",
     "productNames": []
   },
   {
@@ -388,6 +390,7 @@
     "name": "Cerea, a.s.",
     "id": "46504940",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859402557",
     "brandName": "Cerea",
     "productNames": []
   },
@@ -416,6 +419,7 @@
     "name": "ČESKÁ VEJCE CZ, a.s.",
     "id": "25920901",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859401318",
     "brandName": "ČESKÁ VEJCE CZ",
     "productNames": []
   },
@@ -528,6 +532,7 @@
     "name": "Fatra, a.s.",
     "id": "27465021",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8593367",
     "brandName": "Fatra",
     "productNames": []
   },
@@ -675,6 +680,7 @@
     "name": "KMOTR - Masna Kroměříž a.s.",
     "id": "25570765",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859400748",
     "brandName": "KMOTR - Masna Kroměříž",
     "productNames": []
   },
@@ -682,6 +688,7 @@
     "name": "Kostelecké uzeniny a.s.",
     "id": "46900411",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "85956105",
     "brandName": "Kostelecké uzeniny",
     "productNames": []
   },
@@ -689,6 +696,7 @@
     "name": "Krahulík-MASOZÁVOD Krahulčí, a.s.",
     "id": "25586823",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859400178",
     "brandName": "Krahulík-MASOZÁVOD Krahulčí",
     "productNames": []
   },
@@ -745,6 +753,7 @@
     "name": "Lovochemie, a.s.",
     "id": "49100262",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8593358",
     "brandName": "Lovochemie",
     "productNames": []
   },
@@ -766,6 +775,7 @@
     "name": "MAFRA, a.s.",
     "id": "45313351",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859406994",
     "brandName": "MAFRA",
     "productNames": []
   },
@@ -794,6 +804,7 @@
     "name": "Mlékárna Hlinsko, a.s.",
     "id": "48169188",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859400684",
     "brandName": "Mlékárna Hlinsko",
     "productNames": ["Tatra"]
   },
@@ -850,6 +861,7 @@
     "name": "OLMA, a.s.",
     "id": "47675730",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8593807",
     "brandName": "OLMA",
     "productNames": []
   },
@@ -885,6 +897,7 @@
     "name": "PAPEI, a.s.",
     "id": "44223081",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859401571",
     "brandName": "PAPEI",
     "productNames": []
   },
@@ -892,6 +905,7 @@
     "name": "PEK GROUP, a.s.",
     "id": "08337501",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8596451",
     "brandName": "PEK GROUP",
     "productNames": []
   },
@@ -906,6 +920,7 @@
     "name": "PENAM, a.s.",
     "id": "46967851",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8590077",
     "brandName": "PENAM",
     "productNames": []
   },
@@ -955,6 +970,7 @@
     "name": "PRECHEZA a.s.",
     "id": "26872307",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8591987",
     "brandName": "PRECHEZA",
     "productNames": []
   },
@@ -983,6 +999,7 @@
     "name": "PROFROST a.s.",
     "id": "27771245",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "859407300",
     "brandName": "PROFROST",
     "productNames": []
   },
@@ -1137,6 +1154,7 @@
     "name": "Synthesia, a.s.",
     "id": "60108916",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8592804",
     "brandName": "Synthesia",
     "productNames": []
   },
@@ -1179,6 +1197,7 @@
     "name": "UNITED BAKERIES, a.s.",
     "id": "28976231",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "8592368",
     "brandName": "UNITED BAKERIES",
     "productNames": []
   },
@@ -1214,6 +1233,7 @@
     "name": "Vodňanská drůbež, a.s.",
     "id": "25396480",
     "lawForm": "COMPANY_JOINT_STOCK",
+    "barcodePrefix": "85950063",
     "brandName": "Vodňanská drůbež",
     "productNames": ["Vodňanská kachna"]
   },
