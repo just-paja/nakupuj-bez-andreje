@@ -3,6 +3,7 @@ import agrofertList from 'agrofert-list';
 
 import {NotOwned} from './NotOwned';
 import {Owned} from './Owned';
+import {ScreenHeader} from './ScreenHeader';
 import {
   Button,
   SafeAreaView,
@@ -12,17 +13,13 @@ import {
 } from 'react-native';
 
 const companies = agrofertList.filter(company => Boolean(company.barcodePrefix))
-console.log(companies)
-
 
 export function ProductResults ({ code, onBack }) {
   const match = companies.find(company => code.data.startsWith(company.barcodePrefix))
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Výsledek skenu</Text>
-      </View>
-      <View>
+    <SafeAreaView style={styles.root}>
+      <ScreenHeader label="Výsledek skenu" />
+      <View style={styles.column}>
         {match ? <Owned company={match} /> : <NotOwned />}
       </View>
       <View>
@@ -33,4 +30,16 @@ export function ProductResults ({ code, onBack }) {
 }
 
 const styles = StyleSheet.create({
+  root: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column'
+  },
+  column: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });

@@ -5,8 +5,9 @@ import {RNCamera} from 'react-native-camera';
 export function Reader ({ onCode })  {
   return (
     <RNCamera 
-      style={styles.camera}
+      captureAudio={false}
       onBarCodeRead={onCode}
+      style={styles.camera}
     />
   );
 };
