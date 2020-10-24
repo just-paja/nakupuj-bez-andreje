@@ -4,7 +4,7 @@
   roles:
     - role: practical-ansible.nginx_docker
       project_name: cz-andrejovo
-      server_names: andrejovo.cz
+      server_names: andrejov.cz
       project_environment: '{{ lookup("env", "PROJECT_ENVIRONMENT") }}'
       admin_email: pavel@zak.global
       become: true
@@ -15,7 +15,7 @@
   roles:
     - role: practical-ansible.nginx_redirect
       project_name: cz-andrejovo-redirects
-      server_names: www.andrejovo.cz
-      destination_domain: andrejovo.cz
+      server_names: www.andrejov.cz,www.andrejovo.cz,andrejovo.cz
+      destination_domain: andrejov.cz
       admin_email: pavel@zak.global
       become: true
