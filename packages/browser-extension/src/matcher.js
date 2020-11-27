@@ -93,6 +93,7 @@ function setupKosik() {
   if (document.location.href.includes("kosik")) {
     observeAll("body", () => {
       observeAll("[data-tid='product-box']", replaceByTextContent);
+      observeAll("[data-product-id]", replaceByTextContent);
       observeAll(".product-list-search", replaceByTextContent);
       observeAll(".product-detail .product-detail__row", replaceByTextContent);
       observeAll(".product-item", replaceByTextContent);
