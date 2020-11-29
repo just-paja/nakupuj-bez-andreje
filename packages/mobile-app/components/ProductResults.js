@@ -14,6 +14,9 @@ import {
 } from 'react-native';
 
 export function ProductResults ({ code, onGoToHistory, onGoToScan }) {
+  if (!code) {
+    return null
+  }
   const match = findMatch(code)
   return (
     <SafeAreaView style={styles.root}>

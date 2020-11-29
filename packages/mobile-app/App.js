@@ -1,6 +1,7 @@
 import React from 'react';
 import {RNCamera} from 'react-native-camera';
 import {
+  BackHandler,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -24,16 +25,27 @@ function App () {
   const handleGoToResult = React.useCallback(code => {
     setCode(code)
     setView(VIEW_RESULT)
-  })
+  }, [setCode, setView])
   const handleScan = React.useCallback(code => {
     storeScan(code.data)
     handleGoToResult(code.data)
-  }, [handleGoToResult])
-  const handleGoToHistory = React.useCallback(() => setView(VIEW_HISTORY))
+  }, [handleGoToResult, storeScan])
+  const handleGoToHistory = React.useCallback(() => setView(VIEW_HISTORY), [setView])
   const handleGoToScan = React.useCallback(() => {
     setCode(null)
     setView(VIEW_SCAN)
-  })
+  }, [setCode, setView])
+  const handleGoBack = React.useCallback(() => {
+    if (view !== VIEW_SCAN) {
+      handleGoToScan()
+      return true
+    }
+  }, [view, handleGoToScan])
+  React.useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', handleGoBack)
+    return () => backHandler.remove()
+  }, [handleGoBack])
+
   if (view === VIEW_RESULT) {
     return <ProductResults code={code} onGoToHistory={handleGoToHistory} onGoToScan={handleGoToScan} />
   } else if (view === VIEW_HISTORY) {
