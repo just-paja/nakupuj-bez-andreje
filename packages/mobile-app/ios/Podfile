@@ -3,14 +3,14 @@ require_relative '../../../node_modules/@react-native-community/cli-platform-ios
 
 platform :ios, '10.0'
 
-target 'ProjectBarcodeScanner' do
+target 'Andrejov' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'react-native-camera', :path => '../../../node_modules/react-native-camera'
 
-  target 'ProjectBarcodeScannerTests' do
+  target 'AndrejovTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,10 +25,10 @@ target 'ProjectBarcodeScanner' do
   end
 end
 
-target 'ProjectBarcodeScanner-tvOS' do
-  # Pods for ProjectBarcodeScanner-tvOS
+target 'Andrejov-tvOS' do
+  # Pods for Andrejov-tvOS
 
-  target 'ProjectBarcodeScanner-tvOSTests' do
+  target 'Andrejov-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

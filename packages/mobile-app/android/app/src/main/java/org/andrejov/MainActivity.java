@@ -1,4 +1,4 @@
-package com.projectbarcodescanner;
+package org.andrejov;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "ProjectBarcodeScanner";
+    return "Andrejov";
   }
 }

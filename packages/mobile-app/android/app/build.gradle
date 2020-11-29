@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.projectbarcodescanner"
+        applicationId "org.andrejov"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
