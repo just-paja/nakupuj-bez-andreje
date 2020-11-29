@@ -22,7 +22,7 @@
     "jimp": "^0.16.0",
     "jsonschema": "^1.2.5",
     "lerna": "^3.22.1",
-    "lerna-isolate": "^0.4.1",
+    "lerna-isolate": "^0.4.2",
     "node-fetch": "^2.6.0",
     "prettier": "^2.0.5",
     "query-string-manipulator": "^1.2.2",
@@ -38,6 +38,9 @@
   },
   "scripts": {
     "test": "jest",
-    "build-website": "lerna run build --scope andrejovo-web && lerna-isolate bundle andrejovo-web"
+    "build": "lerna run build --stream --parallel",
+    "postbuild": "lerna-isolate bundle -n agrofert-list andrejovo-web",
+    "build:android": "lerna run build:android --scope mobile-app --stream",
+    "build:website": "lerna run build --scope andrejovo-web --stream"
   }
 }

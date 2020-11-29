@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
+import groovy.json.JsonSlurper
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -120,6 +121,20 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
+def getNpmVersion() {
+  def inputFile = new File("../package.json")
+  def packageJson = new JsonSlurper().parseText(inputFile.text)
+  return packageJson["version"]
+}
+
+def getVersionCode() {
+  def process = "git rev-list HEAD --first-parent --count".execute()
+  return process.text.toInteger()
+}
+
+def packageVersion = getNpmVersion()
+def gitVersionCode = getVersionCode()
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -132,8 +147,8 @@ android {
         applicationId "org.andrejov"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode gitVersionCode
+        versionName packageVersion
         missingDimensionStrategy 'react-native-camera', 'general'
     }
     splits {
@@ -151,6 +166,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+          if (project.hasProperty('ANDROID_KEYSTORE_FILE')) {
+            storeFile file(ANDROID_KEYSTORE_FILE)
+            storePassword ANDROID_KEYSTORE_PASS
+            keyAlias ANDROID_KEY_ALIAS
+            keyPassword ANDROID_KEY_PASS
+          }
+        }
     }
     buildTypes {
         debug {
@@ -159,7 +182,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

@@ -1,3 +1,4 @@
+---
 name: Continuous delivery
 on:
   push:
@@ -24,18 +25,38 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Run tests
-        run: npm test -- --coverage
-  publish-npm:
-    name: Publish npm package
+      - name: Setup gradle keystore
+        run: ./scripts/github-setup-gradle.sh
+        env:
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASS: ${{ secrets.ANDROID_KEY_PASS }}
+          ANDROID_KEYSTORE: ${{ secrets.ANDROID_KEYSTORE }}
+          ANDROID_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+      - name: Build
+        run: npm run build
+        env:
+          GTM_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GTM_CODE}}
+      - name: Store npm artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: agrofert-list-npm
+          path: |
+            packages/agrofert-list/*.tgz
+            dist/**
+      - name: Store android artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: andrejov-android
+          path: packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
+
+  test:
+    name: Test before build
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '13'
-          registry-url: 'https://registry.npmjs.org'
       - uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -44,12 +65,25 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: ./node_modules/.bin/lerna run build
-      - name: Publish packages
-        run: ./node_modules/.bin/lerna publish from-git --yes
+      - name: Run tests
+        run: npm test -- --coverage
+
+  publish-npm:
+    name: Publish npm package
+    runs-on: ubuntu-latest
+    needs:
+      - build
+      - test
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Publish npm package
+        run: npm publish dist/agrofert-list.tgz
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
+
   publish-chrome:
     name: Publish Chrome extension
     runs-on: ubuntu-latest
@@ -69,14 +103,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: ./node_modules/.bin/lerna run build
+        run: ./node_modules/.bin/lerna run build --stream
       - name: Publish chrome extension
-        run: ./node_modules/.bin/lerna run publish:chrome
+        run: ./node_modules/.bin/lerna run publish:chrome --stream
         env:
           CHROME_API_CLIENT_ID: ${{ secrets.CHROME_API_CLIENT_ID }}
           CHROME_API_CLIENT_SECRET: ${{ secrets.CHROME_API_CLIENT_SECRET }}
           CHROME_API_REFRESH_TOKEN: ${{ secrets.CHROME_API_REFRESH_TOKEN }}
           CHROME_API_UUID: ${{ secrets.CHROME_API_UUID }}
+
   publish-firefox:
     name: Publish Firefox extension
     runs-on: ubuntu-latest
@@ -96,10 +131,56 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: ./node_modules/.bin/lerna run build
+        run: ./node_modules/.bin/lerna run build --stream
       - name: Publish firefox extension
-        run: ./node_modules/.bin/lerna run publish:firefox
+        run: ./node_modules/.bin/lerna run publish:firefox --stream
         env:
           FIREFOX_API_KEY: ${{ secrets.FIREFOX_API_KEY }}
           FIREFOX_API_SECRET: ${{ secrets.FIREFOX_API_SECRET }}
           FIREFOX_API_UUID: ${{ secrets.FIREFOX_API_UUID }}
+
+  publish-android:
+    name: Publish android package file
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Publish to Google Play
+        run: echo "@TODO"
+
+  deploy:
+    name: Deploy website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+      - uses: ansible/ansible-lint-action@master
+        with:
+          targets: |
+            packages/andrejovo-web/deploy.yml
+      - uses: docker-practice/actions-setup-docker@0.0.1
+        with:
+          docker_version: 19
+          docker_channel: stable
+      - name: Install docker
+        run: sudo apt-get -y install python-docker python3-docker
+      - name: Install ansible deps
+        run: ansible-galaxy install -r ansible-requirements.yml
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PRODUCTION_WEBSITE_SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
+      - name: Deploy to Production
+        env:
+          SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
+          PROJECT_ENVIRONMENT: production
+          GTM_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GTM_CODE}}
+        run: |
+          cd ./packages/andrejovo-web
+          echo -e "[web]\n${{ secrets.PRODUCTION_WEBSITE_DEPLOY_HOST }}\n" > inventory.yml
+          ansible-playbook deploy.yml -i inventory.yml

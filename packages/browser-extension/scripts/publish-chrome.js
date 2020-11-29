@@ -15,13 +15,15 @@ async function publishChromeExtension() {
   const archive = fs.createReadStream(
     path.resolve(__dirname, "..", "dist", archiveName)
   );
-  const { itemError } = await webstore.uploadExisting(archive);
+  const token = await webstore.fetchToken()
+  const { itemError } = await webstore.uploadExisting(archive, token);
   if (itemError && itemError.length > 0) {
     for (const err in itemError) {
       console.error(err);
     }
     throw new Error("Failed to upload zip file");
   }
+  await webstore.publish('default', token)
 }
 
 publishChromeExtension();

@@ -1,9 +1,11 @@
 {
   "name": "mobile-app",
-  "version": "0.0.1",
+  "version": "2.2.11",
   "private": true,
   "scripts": {
     "android": "react-native run-android --no-jetifier",
+    "build:android": "cd android && ./gradlew bundleRelease",
+    "build": "npm run build:android",
     "ios": "react-native run-ios",
     "start": "react-native start"
   },
