@@ -3,12 +3,19 @@ import andrej from './andrej-pin.png'
 
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-export function Owned ({ company }) {
+export function Owned ({ code, company }) {
   return (
     <>
       <View style={styles.labels}>
-        <Text style={styles.text}>{company.name}</Text>
-        <Text style={styles.warning}>Toto je Andrejovo</Text>
+        <View>
+          <Text>{code}</Text>
+        </View>
+        <View>
+          <Text>{company.name}</Text>
+        </View>
+        <View>
+          <Text style={styles.warning}>Toto je Andrejovo</Text>
+        </View>
       </View>
       <Image source={andrej} style={styles.illustration} />
     </>
