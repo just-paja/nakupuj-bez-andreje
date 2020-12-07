@@ -52,3 +52,15 @@ jobs:
           ANDROID_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
       - name: Build the package
         run: npm run build
+      - name: Store npm artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: agrofert-list-npm
+          path: |
+            packages/agrofert-list/*.tgz
+            dist/**
+      - name: Store android artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: andrejov-android
+          path: packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
