@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Test before build
+    name: Build artifacts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
           path: packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
 
   test:
-    name: Test before build
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

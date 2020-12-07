@@ -28,7 +28,7 @@ jobs:
         run: npm test -- --coverage
 
   build:
-    name: Build
+    name: Build artifacts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
