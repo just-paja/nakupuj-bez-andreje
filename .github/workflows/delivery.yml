@@ -104,8 +104,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: ./node_modules/.bin/lerna run build --stream
       - name: Publish chrome extension
         run: ./node_modules/.bin/lerna run publish:chrome --stream
         env:
@@ -132,8 +130,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: ./node_modules/.bin/lerna run build --stream
       - name: Publish firefox extension
         run: ./node_modules/.bin/lerna run publish:firefox --stream
         env:
