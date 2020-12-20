@@ -38,7 +38,7 @@ jobs:
         run: npm run build
         env:
           GTM_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GTM_CODE}}
-      - name: Store npm artifacts
+      - name: Store npm artifact
         uses: actions/upload-artifact@v2
         with:
           name: npm-artifact
