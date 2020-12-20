@@ -57,7 +57,7 @@ jobs:
       - name: Store npm artifact
         uses: actions/upload-artifact@v2
         with:
-          name: npm-artifact
+          name: github-artifact
           path: |
             dist/**
             packages/agrofert-list/*.tgz
