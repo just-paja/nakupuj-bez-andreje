@@ -38,18 +38,23 @@ jobs:
         run: npm run build
         env:
           GTM_CODE: ${{ secrets.PRODUCTION_WEBSITE_NODE_GTM_CODE}}
-      - name: Store npm artifact
+      - name: Store npm artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: agrofert-list-npm
+          name: npm-artifact
           path: |
             packages/agrofert-list/*.tgz
-            packages/browser-extension/dist/**
             dist/**
+      - name: Store extension artifact
+        uses: action/upload-artifacts@v2
+        with:
+          name: extension-artifact
+          path: |
+            packages/browser-extension/dist/**
       - name: Store android artifact
         uses: actions/upload-artifact@v2
         with:
-          name: andrejov-android
+          name: android-artifact
           path: packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
 
   test:
@@ -82,6 +87,9 @@ jobs:
         with:
           node-version: '13'
           registry-url: 'https://registry.npmjs.org'
+      - uses: actions/download-artifact@v2
+        with:
+          name: npm-artifact
       - name: Publish npm package
         run: npm publish $(readlink dist/agrofert-list.tgz)
         env:
@@ -107,6 +115,9 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
+      - uses: actions/download-artifact@v2
+        with:
+          name: extension-artifact
       - name: Publish chrome extension
         run: ./node_modules/.bin/lerna run publish:chrome --stream
         env:
@@ -135,6 +146,9 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
+      - uses: actions/download-artifact@v2
+        with:
+          name: extension-artifact
       - name: Publish firefox extension
         run: ./node_modules/.bin/lerna run publish:firefox --stream
         env:
@@ -183,6 +197,9 @@ jobs:
           key: ${{ secrets.PRODUCTION_WEBSITE_SSH_KEY }}
           name: id_rsa
           known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
+      - uses: actions/download-artifact@v2
+        with:
+          name: npm-artifact
       - name: Deploy to Production
         env:
           SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
