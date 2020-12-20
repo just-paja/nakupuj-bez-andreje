@@ -88,11 +88,8 @@ jobs:
           node-version: '13'
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/download-artifact@v2
-        id: download
         with:
           name: npm-artifact
-      - name: EDP
-        run: ls -R
       - name: Publish npm package
         run: npm publish $(readlink dist/agrofert-list.tgz)
         env:
@@ -119,11 +116,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - uses: actions/download-artifact@v2
-        id: download
         with:
           name: extension-artifact
-      - name: EDP
-        run: ls -R
       - name: Publish chrome extension
         run: ./node_modules/.bin/lerna run publish:chrome --stream
         env:
@@ -153,11 +147,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - uses: actions/download-artifact@v2
-        id: download
         with:
           name: extension-artifact
-      - name: EDP
-        run: ls -R
       - name: Publish firefox extension
         run: ./node_modules/.bin/lerna run publish:firefox --stream
         env:
@@ -207,11 +198,8 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
       - uses: actions/download-artifact@v2
-        id: download
         with:
           name: npm-artifact
-      - name: EDP
-        run: ls -R
       - name: Deploy to Production
         env:
           SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}
