@@ -1,6 +1,6 @@
 {
   "name": "agrofert-list",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "Easy to consume list of companies that fall under Agrofert holding",
   "main": "index.json",
   "scripts": {
