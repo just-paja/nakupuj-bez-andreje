@@ -46,7 +46,7 @@ jobs:
             packages/agrofert-list/*.tgz
             dist/**
       - name: Store extension artifact
-        uses: action/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: extension-artifact
           path: |
