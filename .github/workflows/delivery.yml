@@ -41,21 +41,12 @@ jobs:
       - name: Store npm artifact
         uses: actions/upload-artifact@v2
         with:
-          name: npm-artifact
+          name: github-artifact
           path: |
-            packages/agrofert-list/*.tgz
             dist/**
-      - name: Store extension artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: extension-artifact
-          path: |
+            packages/agrofert-list/*.tgz
             packages/browser-extension/dist/**
-      - name: Store android artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: android-artifact
-          path: packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
+            packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
 
   test:
     name: Test
@@ -89,7 +80,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/download-artifact@v2
         with:
-          name: npm-artifact
+          name: github-artifact
       - name: Publish npm package
         run: npm publish $(readlink dist/agrofert-list.tgz)
         env:
@@ -117,7 +108,7 @@ jobs:
         run: npm ci
       - uses: actions/download-artifact@v2
         with:
-          name: extension-artifact
+          name: github-artifact
       - name: Publish chrome extension
         run: ./node_modules/.bin/lerna run publish:chrome --stream
         env:
@@ -148,7 +139,7 @@ jobs:
         run: npm ci
       - uses: actions/download-artifact@v2
         with:
-          name: extension-artifact
+          name: github-artifact
       - name: Publish firefox extension
         run: ./node_modules/.bin/lerna run publish:firefox --stream
         env:
@@ -199,7 +190,7 @@ jobs:
           known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
       - uses: actions/download-artifact@v2
         with:
-          name: npm-artifact
+          name: github-artifact
       - name: Deploy to Production
         env:
           SERVER_NAME: ${{ secrets.PRODUCTION_WEBSITE_NODE_SERVER_NAME }}

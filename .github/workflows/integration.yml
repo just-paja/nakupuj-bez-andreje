@@ -59,16 +59,7 @@ jobs:
         with:
           name: npm-artifact
           path: |
-            packages/agrofert-list/*.tgz
             dist/**
-      - name: Store extension artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: extension-artifact
-          path: |
+            packages/agrofert-list/*.tgz
             packages/browser-extension/dist/**
-      - name: Store android artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: android-artifact
-          path: packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
+            packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
