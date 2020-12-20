@@ -1,6 +1,7 @@
-const { observe } = require('../observer')
-const { replaceImages } = require('./replaceImages')
 const { matchBlacklistedBrand } = require('./brands')
+const { observe } = require('../observer')
+const { reduceOpacity } = require('./reduceOpacity')
+const { replaceImages } = require('./replaceImages')
 
 function matchElementText (contentNode) {
   return matchBlacklistedBrand(contentNode.textContent)
@@ -10,6 +11,9 @@ function createHighlighter (config) {
   function highlight (node, brand) {
     if (config.replaceWithLogo) {
       replaceImages(node, brand)
+    }
+    if (config.reduceOpacity) {
+      reduceOpacity(node, brand)
     }
   }
 
@@ -36,6 +40,7 @@ function createHighlighter (config) {
     })
   }
   return {
+    highlight,
     matchText
   }
 }

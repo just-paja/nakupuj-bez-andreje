@@ -1,7 +1,8 @@
 const agrofert = require('agrofert-list')
 
-const { createPatternList, matchBrand } = require('agrofert-list/matcher')
-const { observer } = require('../observer')
+const { createPatternList } = require('agrofert-list/matcher')
+const { observe } = require('../observer')
+const { matchBlacklistedBrand } = require('../highlighter/brands')
 
 const brandList = createPatternList(agrofert)
 const cacheKey = 'nakupujBezAndreje'
@@ -34,14 +35,14 @@ function storeProduct (productId, brand) {
   window.localStorage.setItem(cacheKey, JSON.stringify(cache))
 }
 
-function setup () {
+function setup (highlighter) {
   if (document.location.href.includes('makro.cz')) {
     function replaceMakroProductDetail (node) {
-      const brand = matchBrand(node.textContent)
+      const brand = matchBlacklistedBrand(node.textContent)
       if (brand) {
         const target = node.parentNode.querySelector('.product-incart')
         if (target) {
-          replaceElementImages(target, brand)
+          highlighter.highlight(target, brand)
         }
       }
       return brand
@@ -69,17 +70,13 @@ function setup () {
     }
 
     async function replaceMakroListItem (node) {
-      const replacedBrand = replaceByTextContent(node)
-      if (replacedBrand) {
-        return
-      }
       const link = node.querySelector('a.product-photo')
       if (!link) {
         return
       }
       const detailBrand = await requestProductBrand(link.href)
       if (detailBrand) {
-        replaceElementImages(node, detailBrand)
+        highlighter.highlight(node, detailBrand)
       }
     }
 

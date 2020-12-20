@@ -13,9 +13,21 @@ function connectInput (config, input) {
 }
 
 function setupPopup (config) {
-  const inputs = document.querySelectorAll('[type=checkbox]')
+  const inputs = Array.prototype.slice.call(
+    document.querySelectorAll('[type=checkbox]')
+  )
+  const any = inputs.some(input => config[input.id])
   for (const input of inputs) {
     connectInput(config, input)
+  }
+
+  const h1 = document.querySelector('h1')
+  if (any) {
+    h1.innerHTML = 'Nakupuješ bez Andreje'
+    h1.style.backgroundColor = '#0f0'
+  } else {
+    h1.innerHTML = 'Nakupuješ s Andrejem'
+    h1.style.backgroundColor = '#f00'
   }
 
   return () => {}
