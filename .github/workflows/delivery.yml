@@ -44,6 +44,7 @@ jobs:
           name: agrofert-list-npm
           path: |
             packages/agrofert-list/*.tgz
+            packages/browser-extension/dist/**
             dist/**
       - name: Store android artifact
         uses: actions/upload-artifact@v2
