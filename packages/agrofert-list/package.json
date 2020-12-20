@@ -28,7 +28,8 @@
     "index.json",
     "matcher.js",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "isolated-*.tgz"
   ],
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/tree/master/packages/agrofert-list#readme"
 }

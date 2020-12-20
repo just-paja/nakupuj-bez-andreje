@@ -25,6 +25,7 @@
     "pages",
     "public",
     "package-lock.json",
-    "node_deps"
+    "node_deps",
+    "isolated-*.tgz"
   ]
 }
