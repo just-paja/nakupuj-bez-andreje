@@ -1,3 +1,4 @@
-const { initialize } = require("./matcher.js");
+const { configure } = require('./config')
+const { setupExtension } = require('./matcher')
 
-initialize();
+configure(setupExtension)

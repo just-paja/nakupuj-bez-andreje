@@ -25,6 +25,7 @@
     "lerna-isolate": "^0.4.2",
     "node-fetch": "^2.6.0",
     "prettier": "^2.0.5",
+    "prettier-standard": "^16.4.1",
     "query-string-manipulator": "^1.2.2",
     "web-ext": "^5.0.0",
     "webpack": "^4.44.1",

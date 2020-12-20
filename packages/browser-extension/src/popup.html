@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nakupuješ bez Andreje</title>
+  <meta charset="utf-8" />
+  <script src="./popup.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    h1 {
+    }
+    body, html {
+      min-width: 240px;
+    }
+    body {
+      padding: 8px;
+    }
+    form {
+      margin-top: 8px;
+    }
+    ul, li {
+      list-style: none;
+    }
+    .input {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      line-height: 16px;
+    }
+    [type=checkbox] {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nakupuješ bez Andreje</h1>
+  <form>
+    <ul>
+      <li class="input">
+        <input name="productAction" id="replaceWithLogo" type="checkbox" value="replaceWithLogo" />
+        <label for="replaceWithLogo">Nahradit logem</label>
+      </li>
+      <li class="input">
+        <input name="productAction" id="decreaseOpacity" type="checkbox" value="decreaseOpacity" />
+        <label for="decreaseOpacity">Zprůhlednit</label>
+      </li>
+    </ul>
+  </form>
+  
+</body>
+</html>
