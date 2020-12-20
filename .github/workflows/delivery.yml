@@ -83,7 +83,7 @@ jobs:
           node-version: '13'
           registry-url: 'https://registry.npmjs.org'
       - name: Publish npm package
-        run: npm publish dist/agrofert-list.tgz
+        run: npm publish ${readlink dist/agrofert-list.tgz}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
 
