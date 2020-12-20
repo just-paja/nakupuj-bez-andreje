@@ -88,6 +88,7 @@ jobs:
           node-version: '13'
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/download-artifact@v2
+        id: download
         with:
           name: npm-artifact
       - name: EDP
@@ -118,6 +119,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - uses: actions/download-artifact@v2
+        id: download
         with:
           name: extension-artifact
       - name: EDP
@@ -151,6 +153,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - uses: actions/download-artifact@v2
+        id: download
         with:
           name: extension-artifact
       - name: EDP
@@ -204,6 +207,7 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.PRODUCTION_WEBSITE_KNOWN_HOSTS }}
       - uses: actions/download-artifact@v2
+        id: download
         with:
           name: npm-artifact
       - name: EDP
