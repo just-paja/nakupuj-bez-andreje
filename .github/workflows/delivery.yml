@@ -84,7 +84,9 @@ jobs:
         with:
           name: github-artifact
       - name: Publish npm package
-        run: npm publish $(readlink dist/agrofert-list.tgz)
+        run: |
+          cd packages/agrofert-list
+          npm publish agrofert-list-*.tgz
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}
 
