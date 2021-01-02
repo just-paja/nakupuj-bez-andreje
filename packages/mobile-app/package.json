@@ -1,6 +1,6 @@
 {
   "name": "mobile-app",
-  "version": "2.3.6-alpha.4",
+  "version": "2.3.6-alpha.5",
   "private": true,
   "scripts": {
     "android": "react-native run-android --no-jetifier",
