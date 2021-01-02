@@ -47,6 +47,7 @@ jobs:
             packages/agrofert-list/*.tgz
             packages/browser-extension/dist/**
             packages/mobile-app/android/app/build/outputs/bundle/release/app-release.aab
+            packages/andrejovo-web/*.tgz
 
   test:
     name: Test
