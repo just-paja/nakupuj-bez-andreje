@@ -8,8 +8,20 @@ function matchElementText (contentNode) {
   return matchBlacklistedBrand(contentNode.textContent)
 }
 
+function getTitle (brand) {
+  return `Product blacklisted because it matches: '${brand.name}' of '${brand.company}'`
+}
+
+function setTitle (node, brand) {
+  const matchTitle = getTitle(brand)
+  if (node.title !== matchTitle) {
+    node.title = matchTitle
+  }
+}
+
 function createHighlighter (config) {
   function highlight (node, brand) {
+    setTitle(node, brand)
     if (config.replaceWithLogo) {
       replaceImages(node, brand)
     }
