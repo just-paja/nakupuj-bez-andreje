@@ -1,11 +1,11 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 
-import './Banner.scss'
+import styles from './Banner.module.scss'
 
 export function Banner () {
   return (
-    <header className='header'>
+    <header className={styles.header}>
       <Container>
         <img src='/andrej-pin.png' />
       </Container>

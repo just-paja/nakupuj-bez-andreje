@@ -1,13 +1,18 @@
+import classnames from 'classnames'
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-import './QueryForm.scss'
+import styles from './QueryForm.module.scss'
 
 export function QueryFormInline ({ q }) {
   const [value, setValue] = useState(q)
   return (
-    <Form className='query-form query-form-inline' action='search' method='get'>
+    <Form
+      className={classnames(styles.queryForm, styles.queryFormInline)}
+      action='search'
+      method='get'
+    >
       <Form.Group controlId='q'>
         <Form.Control
           name='q'

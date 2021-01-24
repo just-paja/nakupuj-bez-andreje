@@ -1,13 +1,13 @@
 import React from 'react'
 
-import './MatchingBrand.scss'
+import styles from './MatchingBrand.module.scss'
 
 export function MatchingBrand ({ brand }) {
   return (
-    <div className='matching-brand'>
-      <div className='match-warning'>Tohle je Andrejovo</div>
-      <div className='match-bubble'>
-        <div className='avatar-line'>
+    <div className={styles.matchingBrand}>
+      <div className={styles.matchWarning}>Tohle je Andrejovo</div>
+      <div className={styles.matchBubble}>
+        <div className={styles.avatarLine}>
           <img src='/match.png' />
         </div>
       </div>

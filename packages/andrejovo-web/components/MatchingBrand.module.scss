@@ -1,6 +1,6 @@
 @import "../theme.scss";
 
-.matching-brand {
+.matchingBrand {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -8,12 +8,12 @@
   text-align: center;
   margin-top: $spacing-base * 2;
 
-  .match-warning {
+  .matchWarning {
     font-size: $font-size-base * 3/2;
     color: $danger;
   }
 
-  .match-bubble {
+  .matchBubble {
     align-items: center;
     background: $danger;
     border: $spacing-base solid $danger;
@@ -27,7 +27,7 @@
     width: $spacing-base * 20;
   }
 
-  .avatar-line {
+  .avatarLine {
     background: $white;
     display: flex;
     justify-content: center;

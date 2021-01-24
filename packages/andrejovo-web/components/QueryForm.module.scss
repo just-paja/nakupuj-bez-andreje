@@ -1,12 +1,12 @@
 @import "../theme.scss";
 
-.query-form {
+.queryForm {
   min-width: $spacing-base * 18;
   max-width: $paragraph-max-width;
   margin: $spacing-base auto 0;
 
   h1,
-  .form-buttons {
+  :global(.form-buttons) {
     text-align: center;
   }
 
@@ -16,12 +16,12 @@
     margin-top: $spacing-base;
   }
 
-  .form-group {
+  :global .form-group {
     flex-grow: 1;
   }
 }
 
-.query-form-inline {
+.queryFormInline {
   background: $primary;
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@
   justify-content: center;
   margin: 0 auto;
 
-  .form-group {
+  :global .form-group {
     margin: 0 $spacing-base;
     flex-grow: 1;
   }

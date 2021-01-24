@@ -5,10 +5,10 @@ import { Banner } from '../components/Banner'
 import { ExtensionPromo } from '../components/ExtensionPromo'
 import { QueryForm } from '../components/QueryForm'
 
-import './index.scss'
+import styles from './index.module.scss'
 
 const Home = () => (
-  <Container as='main' className='home-page'>
+  <Container as='main' className={styles.homePage}>
     <Head>
       <meta name='title' content='Je to Andrejovo?' />
       <meta

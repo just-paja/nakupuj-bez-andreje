@@ -2,11 +2,11 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-import './QueryForm.scss'
+import styles from './QueryForm.module.scss'
 
 export function QueryForm () {
   return (
-    <Form className='query-form' action='search' method='get'>
+    <Form className={styles.queryForm} action='search' method='get'>
       <h1>Je to Andrejovo?</h1>
       <fieldset>
         <Form.Group controlId='q'>

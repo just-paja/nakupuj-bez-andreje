@@ -1,14 +1,10 @@
-const withSass = require('@zeit/next-sass')
+const path = require('path')
 
-module.exports = withSass({
+module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, '..', '..', 'node_modules')]
+  },
   publicRuntimeConfig: {
     GTM_CODE: process.env.GTM_CODE || null
-  },
-  webpack: (config, { dev }) => {
-    config.module.rules.push({
-      test: /__tests__/,
-      loader: 'ignore-loader'
-    })
-    return config
   }
-})
+}

@@ -3,11 +3,11 @@ import React from 'react'
 
 import { QueryFormInline } from './QueryFormInline'
 
-import './QueryFormHeader.scss'
+import styles from './QueryFormHeader.module.scss'
 
 export function QueryFormHeader ({ q }) {
   return (
-    <div className='query-form-header'>
+    <div className={styles.queryFormHeader}>
       <Container>
         <QueryFormInline q={q} />
       </Container>
