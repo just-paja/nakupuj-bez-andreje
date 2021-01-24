@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import { Banner } from '../components/Banner'
 import { ExtensionPromo } from '../components/ExtensionPromo'
 import { QueryForm } from '../components/QueryForm'
+import { Donate } from '../components/Donate'
 
 import styles from './index.module.scss'
 
@@ -19,6 +20,7 @@ const Home = () => (
     <Banner />
     <QueryForm />
     <ExtensionPromo />
+    <Donate />
   </Container>
 )
 
