@@ -1,25 +1,8 @@
-const { getPackageTestConfig } = require("./dev");
+const { guessRootConfig } = require('lerna-jest')
 
-const agrofertList = require("./packages/agrofert-list/jest.config");
-const andrejovoWeb = require("./packages/andrejovo-web/jest.config");
-const browserExtension = require("./packages/browser-extension/jest.config");
+process.env.NODE_PATH = require('path').join(__dirname, 'packages')
+module.exports = guessRootConfig(__dirname)
 
-const config = {
-  collectCoverageFrom: [
-    "**/**/*.{js,jsx}",
-    "!**/node_modules/**",
-    "!**/coverage/**",
-    "!**/*.config.js",
-    "!<rootDir>/build-android.js"
-  ]
-};
-
-module.exports = getPackageTestConfig(
-  __dirname,
-  [
-    ...andrejovoWeb.projects,
-    ...agrofertList.projects,
-    ...browserExtension.projects
-  ],
-  config
-);
+module.exports.projects[6].transformIgnorePatterns = [
+  'node_modules/(?!((jest-)?react-native-|rn-/.*))'
+]

@@ -1,15 +1,14 @@
-import React from "react";
-import Alert from "react-bootstrap/Alert";
+import React from 'react'
 
-import "./MatchingBrand.scss";
+import './MatchingBrand.scss'
 
-export function MatchingBrand({ brand }) {
+export function MatchingBrand ({ brand }) {
   return (
-    <div className="matching-brand">
-      <div className="match-warning">Tohle je Andrejovo</div>
-      <div className="match-bubble">
-        <div className="avatar-line">
-          <img src="/match.png" />
+    <div className='matching-brand'>
+      <div className='match-warning'>Tohle je Andrejovo</div>
+      <div className='match-bubble'>
+        <div className='avatar-line'>
+          <img src='/match.png' />
         </div>
       </div>
 
@@ -23,5 +22,5 @@ export function MatchingBrand({ brand }) {
         </dl>
       </div>
     </div>
-  );
+  )
 }

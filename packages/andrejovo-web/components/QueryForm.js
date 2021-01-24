@@ -1,27 +1,27 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import React from 'react'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
-import "./QueryForm.scss";
+import './QueryForm.scss'
 
-export function QueryForm() {
+export function QueryForm () {
   return (
-    <Form className="query-form" action="search" method="get">
+    <Form className='query-form' action='search' method='get'>
       <h1>Je to Andrejovo?</h1>
       <fieldset>
-        <Form.Group controlId="q">
+        <Form.Group controlId='q'>
           <Form.Control
-            name="q"
-            type="text"
-            placeholder="Např. Penam toustový chléb"
+            name='q'
+            type='text'
+            placeholder='Např. Penam toustový chléb'
           />
         </Form.Group>
       </fieldset>
-      <div className="form-buttons">
-        <Button type="submit" size="lg">
+      <div className='form-buttons'>
+        <Button type='submit' size='lg'>
           Hledat v impériu
         </Button>
       </div>
     </Form>
-  );
+  )
 }

@@ -1,5 +1,3 @@
-const mainIcon = 'web-bez-andreje.png'
-
 function getTitle (brand) {
   return `Product blacklisted because it matches: '${brand.name}' of '${brand.company}'`
 }

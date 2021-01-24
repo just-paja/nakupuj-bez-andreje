@@ -1,38 +1,38 @@
-const { getValidLawForms } = require("./scripts/listSubjects");
+const { getValidLawForms } = require('./scripts/listSubjects')
 
 module.exports = {
-  id: "/CompanyList",
-  type: "array",
+  id: '/CompanyList',
+  type: 'array',
   items: {
-    type: "object",
+    type: 'object',
     additionalProperties: false,
     properties: {
       brandName: {
-        type: "string",
+        type: 'string',
         description:
-          "Název značky - pár slov podle kterých se dá vyhledat v obchodním rejstříku"
+          'Název značky - pár slov podle kterých se dá vyhledat v obchodním rejstříku'
       },
       name: {
-        type: "string",
-        description: "Celý název společnosti"
+        type: 'string',
+        description: 'Celý název společnosti'
       },
       id: {
-        type: "string",
-        description: "IČO"
+        type: 'string',
+        description: 'IČO'
       },
       barcodePrefix: {
-        type: "string",
-        description: "Global Company Prefix",
-      },  
+        type: 'string',
+        description: 'Global Company Prefix'
+      },
       lawForm: {
-        type: "string",
-        description: "Právní forma",
+        type: 'string',
+        description: 'Právní forma',
         enum: getValidLawForms()
       },
       productNames: {
-        type: "array",
-        items: { type: "string" }
+        type: 'array',
+        items: { type: 'string' }
       }
     }
   }
-};
+}

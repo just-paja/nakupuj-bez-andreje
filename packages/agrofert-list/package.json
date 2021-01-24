@@ -31,5 +31,11 @@
     "README.md",
     "isolated-*.tgz"
   ],
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "parser": "babel-eslint"
+  },
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/tree/master/packages/agrofert-list#readme"
 }

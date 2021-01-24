@@ -1,9 +1,10 @@
 const { archiveName } = require('../paths')
 
-const config = require('dotenv').config()
+require('dotenv').config()
+
 const fs = require('fs')
-const ChromeExtension = require('crx')
-const package = require('../package.json')
+// const ChromeExtension = require('crx')
+const pkg = require('../package.json')
 const path = require('path')
 const webpack = require('../webpack.config.js')
 const archiver = require('archiver')
@@ -13,30 +14,32 @@ const mainIconName = 'web-bez-andreje'
 const iconSizes = [16, 48, 128]
 
 const mainIcon = `${mainIconName}.png`
+/*
 const mainIcon16 = `${mainIconName}-16.png`
 const mainIcon48 = `${mainIconName}-48.png`
 const mainIcon128 = `${mainIconName}-128.png`
+*/
 
 const rootPath = path.resolve(__dirname, '..')
 const mainIconSrc = path.join(rootPath, 'icons', 'main.png')
 const srcPath = path.join(rootPath, 'src')
 const bundlePath = webpack.output.path
 const distPath = path.resolve(bundlePath, '..')
-const packagePath = path.join(distPath, `${archiveName}.crx`)
+// const packagePath = path.join(distPath, `${archiveName}.crx`)
 const zipPath = path.join(distPath, archiveName)
 const manifestPath = path.join(bundlePath, 'manifest.json')
 const mainIconPath = path.join(bundlePath, mainIcon)
 const popupPageSrc = path.join(srcPath, 'popup.html')
 const popupPagePath = path.join(bundlePath, 'popup.html')
 
-let icons = {}
+const icons = {}
 
 function createManifest () {
   const manifest = {
     manifest_version: 2,
     name: 'Nakupuj bez Andreje',
-    description: package.description,
-    version: package.version,
+    description: pkg.description,
+    version: pkg.version,
     browser_action: {
       default_icon: mainIcon,
       default_popup: 'popup.html'
@@ -72,7 +75,7 @@ function createManifest () {
 }
 
 async function createIcons () {
-  for (size of iconSizes) {
+  for (const size of iconSizes) {
     const jimp = await Jimp.read(mainIconSrc)
     const iconName = `${mainIconName}-${size}.png`
     jimp
@@ -83,6 +86,7 @@ async function createIcons () {
   }
 }
 
+/*
 async function createPackage () {
   const crx = new ChromeExtension({
     privateKey: process.env.PACKAGE_KEY
@@ -92,6 +96,7 @@ async function createPackage () {
   fs.writeFileSync(packagePath, buffer)
   process.stdout.write(`Created package in ${packagePath}\n`)
 }
+*/
 
 async function createZip () {
   const archive = archiver('zip')

@@ -1,19 +1,7 @@
-import React from 'react';
-import agrofertList from 'agrofert-list';
+import React from 'react'
 
-import {findMatch} from '../matcher';
-import {NotOwned} from './NotOwned';
-import {Owned} from './Owned';
-import {ScreenHeader} from './ScreenHeader';
-import {getHistory} from '../storage';
-import {
-  Button,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import { findMatch } from '../matcher'
+import { StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native'
 
 export function HistoryItem ({ code, onGoToResult }) {
   const match = findMatch(code)
@@ -34,6 +22,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 16,
     paddingTop: 8,
-    paddingBottom: 8,
-  },
-});
+    paddingBottom: 8
+  }
+})

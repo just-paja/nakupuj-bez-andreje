@@ -1,21 +1,24 @@
-function escapeRegexp(str) {
-  return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+function escapeRegexp (str) {
+  return str.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
 }
 
-const textPadding = `[\\s,\(\)]`;
+const textPadding = '[\\s,()]'
 
-function getPatternFromName(name) {
+function getPatternFromName (name) {
   return new RegExp(
     `(^|${textPadding})${escapeRegexp(name.toLowerCase())}($|${textPadding})`
-  );
+  )
 }
 
-function matchBrand(patternList, str) {
-  const clean = str.replace(/[\s]+/g, " ").trim().toLowerCase();
-  return patternList.find(brand => brand.pattern.test(clean)) || null;
+function matchBrand (patternList, str) {
+  const clean = str
+    .replace(/[\s]+/g, ' ')
+    .trim()
+    .toLowerCase()
+  return patternList.find(brand => brand.pattern.test(clean)) || null
 }
 
-function createPatternList(brandList) {
+function createPatternList (brandList) {
   return brandList.reduce(
     (aggr, brand) =>
       aggr
@@ -36,11 +39,11 @@ function createPatternList(brandList) {
           }))
         ),
     []
-  );
+  )
 }
 
 module.exports = {
   createPatternList,
   getPatternFromName,
   matchBrand
-};
+}

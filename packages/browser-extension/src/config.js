@@ -1,5 +1,5 @@
 function getStorage () {
-  return window.storage || chrome.storage
+  return window.storage || global.chrome.storage
 }
 
 const configPath = 'config'
@@ -16,10 +16,11 @@ async function readConfig () {
 }
 
 async function setConfig (key, value) {
-  return new Promise(async resolve =>
+  const config = await readConfig()
+  return new Promise(resolve =>
     getStorage(configPath).local.set(
       {
-        ...(await readConfig()),
+        ...config,
         [key]: value
       },
       resolve

@@ -1,25 +1,11 @@
-import React from 'react';
-import agrofertList from 'agrofert-list';
+import React from 'react'
 
-import {NotOwned} from './NotOwned';
-import {Owned} from './Owned';
-import {ScreenHeader} from './ScreenHeader';
-import {getHistory} from '../storage';
-import {
-  Button,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { StyleSheet, Text } from 'react-native'
 
 export function HistoryEmpty () {
-  return (
-    <Text style={styles.root}>Nic zatím nebylo naskenováno</Text>
-  )
+  return <Text style={styles.root}>Nic zatím nebylo naskenováno</Text>
 }
 
 const styles = StyleSheet.create({
-  root: {
-  },
-});
+  root: {}
+})

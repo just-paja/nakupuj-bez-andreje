@@ -20,6 +20,8 @@ function throttle (node, callback) {
 let observedNodes = []
 let observers = []
 
+const { MutationObserver } = global
+
 function observeNode (node, callback) {
   const matchingNode = observedNodes.find(n => n === node)
   if (!matchingNode) {

@@ -27,5 +27,11 @@
     "package-lock.json",
     "node_deps",
     "isolated-*.tgz"
-  ]
+  ],
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "parser": "babel-eslint"
+  }
 }

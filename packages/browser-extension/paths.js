@@ -1,5 +1,5 @@
-const archiveName = "nakupuj-bez-andreje.zip";
+const archiveName = 'nakupuj-bez-andreje.zip'
 
 module.exports = {
-  archiveName,
-};
+  archiveName
+}

@@ -1,14 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import {NotOwned} from './NotOwned';
-import {Owned} from './Owned';
-import {
-  Button,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
 
 export function ScreenHeader ({ label }) {
   return (
@@ -22,11 +14,11 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#ccc',
     paddingBottom: 12,
-    paddingTop: 12,
+    paddingTop: 12
   },
   text: {
     fontSize: 24,
     textAlign: 'center',
-    color: '#666',
+    color: '#666'
   }
-});
+})

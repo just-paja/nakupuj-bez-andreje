@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
 
 export function NotOwned ({ code }) {
   return (
@@ -14,9 +14,9 @@ export function NotOwned ({ code }) {
 const styles = StyleSheet.create({
   beCalm: {
     color: '#090',
-    fontSize: 24,
+    fontSize: 24
   },
   code: {
-    textAlign: 'center',
+    textAlign: 'center'
   }
-});
+})
