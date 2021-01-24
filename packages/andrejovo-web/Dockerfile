@@ -11,7 +11,7 @@ ADD andrejovo-web-*.tgz .
  
 WORKDIR /usr/src/app/package
 
-RUN npm ci --only=production --no-optional
+RUN npm install --only=production --no-optional
 
 EXPOSE 80
 
