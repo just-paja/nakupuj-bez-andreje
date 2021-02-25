@@ -27,6 +27,13 @@ export function ExtensionPromo () {
             title='Nakupuj bez Andreje ve Firefoxu'
           />
         </li>
+        <li>
+          <a
+            href='https://microsoftedge.microsoft.com/addons/detail/nakupuj-bez-andreje/pogbglamipgclmpjlmjdlaligmgoeldk'
+            className={classnames(styles.browser, styles.edge)}
+            title='Nakupuj bez Andreje v Microsoft Edge'
+          />
+        </li>
       </ul>
     </div>
   )
