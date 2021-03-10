@@ -5,7 +5,7 @@ function setup (highlight) {
     observe('body', () => {
       highlight.matchText('.whispererProductLink', '.Whisperer_productName')
       highlight.matchText('.productCard__wrapper', 'h4')
-      highlight.matchText('#productDetail > div', 'h2')
+      highlight.matchText('#productDetail')
     })
   }
 }
