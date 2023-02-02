@@ -23,7 +23,7 @@
     "jest-watch-typeahead": "^0.6.0",
     "jimp": "^0.16.0",
     "jsonschema": "^1.2.5",
-    "lerna": "^3.22.1",
+    "lerna": "^6.4.1",
     "lerna-isolate": "^0.4.2",
     "lerna-jest": "^0.2.2",
     "node-fetch": "^2.6.0",
