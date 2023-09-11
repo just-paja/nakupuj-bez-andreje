@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.rome.tools/schemas/12.1.0/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "all": true,
+      "style": {
+        "noImplicitBoolean": "off"
+      }
+    }
+  },
+  "files": {
+    "ignore": ["dist", "coverage/*", ".next", "prisma"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  }
+}

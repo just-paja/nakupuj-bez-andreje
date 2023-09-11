@@ -33,12 +33,6 @@
     "url": "https://github.com/just-paja/nakupuj-bez-andreje/issues"
   },
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/tree/master/packages/browser-extension#readme",
-  "standard": {
-    "env": [
-      "jest"
-    ],
-    "parser": "babel-eslint"
-  },
   "dependencies": {
     "agrofert-list": "file:../agrofert-list"
   }

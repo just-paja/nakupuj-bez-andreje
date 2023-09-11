@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { BackHandler } from 'react-native'
+import { ProductResults } from './components/ProductResults'
 import { Reader } from './components/Reader'
 import { ScanHistory } from './components/ScanHistory'
-import { ProductResults } from './components/ProductResults'
 import { storeScan } from './storage'
+import { BackHandler } from 'react-native'
 
 const VIEW_SCAN = 'scan'
 const VIEW_RESULT = 'result'

@@ -64,7 +64,7 @@ function getValidLawForms () {
 
 function filterByText (query, root, text) {
   return root.filter(
-    (index, item) =>
+    (item) =>
       query(item)
         .text()
         .trim() === text
@@ -72,7 +72,7 @@ function filterByText (query, root, text) {
 }
 
 function parseLawForm (text) {
-  return Object.entries(LAW_FORM_MAP).find(([pattern, form]) => {
+  return Object.entries(LAW_FORM_MAP).find(([pattern]) => {
     const lawFormTest = new RegExp(`${pattern}`, 'i')
     return lawFormTest.test(text)
   })

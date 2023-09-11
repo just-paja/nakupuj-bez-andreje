@@ -1,4 +1,5 @@
 const { matchBlacklistedBrand } = require('../brands')
+const { describe, expect, it } = require('@jest/globals')
 
 describe('matchBlacklistedBrand', () => {
   it('matches penam at the beginning of the string', () => {

@@ -3,9 +3,7 @@
   "version": "2.3.9",
   "description": "Easy to consume list of companies that fall under Agrofert holding",
   "main": "index.json",
-  "scripts": {
-    "test": "jest"
-  },
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/just-paja/nakupuj-bez-andreje.git"
@@ -31,11 +29,5 @@
     "README.md",
     "isolated-*.tgz"
   ],
-  "standard": {
-    "env": [
-      "jest"
-    ],
-    "parser": "babel-eslint"
-  },
   "homepage": "https://github.com/just-paja/nakupuj-bez-andreje/tree/master/packages/agrofert-list#readme"
 }

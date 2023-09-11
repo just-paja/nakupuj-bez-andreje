@@ -1,6 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
 import getConfig from 'next/config'
+import Head from 'next/head'
+import React from 'react'
 
 import { Footer } from '../components/Footer'
 
@@ -25,6 +25,7 @@ function Gtm () {
   }
   return (
     <Head>
+      {/* rome-ignore lint/security/noDangerouslySetInnerHtml: Intentional use */}
       <script dangerouslySetInnerHTML={innerHTML} />
     </Head>
   )

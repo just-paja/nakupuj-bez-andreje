@@ -10,7 +10,7 @@ const cacheKey = 'nakupujBezAndreje'
 function getCache () {
   try {
     return JSON.parse(window.localStorage.getItem(cacheKey)) || {}
-  } catch (e) {
+  } catch (_e) {
     return {}
   }
 }

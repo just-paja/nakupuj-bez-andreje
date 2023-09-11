@@ -8,7 +8,7 @@ export function MatchingBrand ({ brand }) {
       <div className={styles.matchWarning}>Tohle je Andrejovo</div>
       <div className={styles.matchBubble}>
         <div className={styles.avatarLine}>
-          <img src='/match.png' />
+          <img alt="Match" src='/match.png' />
         </div>
       </div>
 

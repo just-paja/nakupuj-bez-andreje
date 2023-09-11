@@ -10,10 +10,8 @@
   "dependencies": {
     "agrofert-list": "file:../agrofert-list",
     "bootstrap": "^4.4.1",
-    "next": "9.3.4",
-    "react": "16.13.1",
-    "react-bootstrap": "^1.0.0",
-    "react-dom": "16.13.1"
+    "next": "13.4.19",
+    "react-bootstrap": "^1.0.0"
   },
   "files": [
     ".next",
@@ -24,11 +22,5 @@
     "package-lock.json",
     "node_deps",
     "isolated-*.tgz"
-  ],
-  "standard": {
-    "env": [
-      "jest"
-    ],
-    "parser": "babel-eslint"
-  }
+  ]
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { View, StyleSheet } from 'react-native'
 import { ReaderMenu } from './ReaderMenu'
+import { StyleSheet, View } from 'react-native'
 import { RNCamera } from 'react-native-camera'
 
 export function Reader ({ onScan, onGoToHistory }) {

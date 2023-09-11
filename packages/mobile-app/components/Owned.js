@@ -1,5 +1,5 @@
-import React from 'react'
 import andrej from './andrej-pin.png'
+import React from 'react'
 
 import { Image, StyleSheet, Text, View } from 'react-native'
 

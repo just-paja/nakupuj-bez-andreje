@@ -1,4 +1,4 @@
-function reduceOpacity (node, matchingBrand) {
+function reduceOpacity (node, _matchingBrand) {
   node.style.opacity = 0.2
 }
 

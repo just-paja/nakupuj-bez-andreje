@@ -1,10 +1,10 @@
 const mainIcon = 'web-bez-andreje.png'
 
 function getReplacementUrl () {
-  if (typeof chrome !== 'undefined') {
+  if (typeof global.chrome !== 'undefined') {
     return global.chrome.extension.getURL(mainIcon)
   }
-  if (typeof safari !== 'undefined') {
+  if (typeof global.safari !== 'undefined') {
     return `${global.safari.extension.baseURI}${mainIcon}`
   }
   return mainIcon
@@ -12,7 +12,7 @@ function getReplacementUrl () {
 
 const replacementImageUrl = getReplacementUrl()
 
-function replaceImages (node, matchingBrand) {
+function replaceImages (node, _matchingBrand) {
   const images = node.querySelectorAll('img')
   for (const image of images) {
     if (image.src !== replacementImageUrl) {

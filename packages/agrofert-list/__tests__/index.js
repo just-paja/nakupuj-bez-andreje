@@ -1,3 +1,4 @@
+const { describe, expect, it } = require('@jest/globals')
 const { getValidLawForms } = require('../scripts/listSubjects')
 const { Validator } = require('jsonschema')
 
@@ -21,7 +22,7 @@ describe('company list', () => {
     ).not.toThrow()
   })
 
-  list.forEach((company, index) => {
+  for (const [index, company] of Object.entries(list)) {
     describe(company.name || `record ${index}`, () => {
       it('has name', () => {
         expect(company.name).not.toBeFalsy()
@@ -35,5 +36,5 @@ describe('company list', () => {
         expect(company.lawForm).toBeOneOf(lawForms)
       })
     })
-  })
+  }
 })

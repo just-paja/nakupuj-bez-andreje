@@ -6,7 +6,7 @@ import { HistoryItem } from './HistoryItem'
 import { ScreenHeader } from './ScreenHeader'
 import { Button, SafeAreaView, StyleSheet, View } from 'react-native'
 
-function getHistoryList (history, code, onGoToResult) {
+function getHistoryList (history, _code, onGoToResult) {
   if (history.length === 0) {
     return <HistoryEmpty />
   }

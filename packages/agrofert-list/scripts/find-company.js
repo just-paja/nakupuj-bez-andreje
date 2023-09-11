@@ -17,6 +17,8 @@ async function findCompanies () {
     console.error(e)
     process.exit(255)
   }
+
+  // rome-ignore lint/nursery/noConsoleLog: printing is good enough
   console.log(data)
 }
 

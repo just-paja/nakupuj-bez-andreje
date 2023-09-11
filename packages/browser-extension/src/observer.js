@@ -44,7 +44,9 @@ function observe (selector, callback) {
 }
 
 function clearObservers () {
-  observers.forEach(observer => observer.disconnect())
+  for (const observer of observers) {
+    observer.disconnect()
+  }
   observers = []
   observedNodes = []
 }
