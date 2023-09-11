@@ -13,7 +13,7 @@
     "babel-loader": "^8.2.2",
     "babel-preset-react-native": "^4.0.1",
     "cheerio": "^1.0.0-rc.12",
-    "chrome-webstore-upload": "^0.2.2",
+    "chrome-webstore-upload": "^1.0.0",
     "crx": "^5.0.1",
     "dotenv": "^8.2.0",
     "jest-css-modules-transform": "^4.4.2",
