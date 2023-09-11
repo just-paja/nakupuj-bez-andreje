@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 
 import { Banner } from '../components/Banner'
+import { Donate } from '../components/Donate'
 import { ExtensionPromo } from '../components/ExtensionPromo'
 import { QueryForm } from '../components/QueryForm'
-import { Donate } from '../components/Donate'
 
 import styles from './index.module.scss'
 

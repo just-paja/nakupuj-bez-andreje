@@ -5,21 +5,12 @@
   "scripts": {
     "android": "react-native run-android --no-jetifier",
     "build:android": "cd android && ./gradlew bundleRelease",
-    "build": "npm run build:android",
+    "unstable:build": "npm run build:android",
     "ios": "react-native run-ios",
     "start": "react-native start"
   },
   "dependencies": {
     "agrofert-list": "file:../agrofert-list",
-    "react": "16.13.1",
-    "react-native": "0.63.4",
-    "react-native-camera": "^3.42.0",
-    "react-native-mmkv-storage": "^0.4.3"
-  },
-  "standard": {
-    "env": [
-      "jest"
-    ],
-    "parser": "babel-eslint"
+    "react-native": "0.72.4"
   }
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 
 import { Clean } from '../components/Clean'
-import { matchBlacklistedBrand } from '../db'
 import { MatchingBrand } from '../components/MatchingBrand'
 import { QueryFormHeader } from '../components/QueryFormHeader'
+import { matchBlacklistedBrand } from '../db'
 
 function Search ({ brand, query }) {
   const { q } = query
@@ -28,7 +28,7 @@ Search.getInitialProps = function ({ query, res }) {
     }
   }
   const match = matchBlacklistedBrand(q)
-  return { brand: match && match.companyRef, query }
+  return { brand: match?.companyRef, query }
 }
 
 export default Search

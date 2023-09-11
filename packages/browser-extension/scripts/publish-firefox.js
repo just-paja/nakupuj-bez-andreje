@@ -12,9 +12,11 @@ async function publishFirefoxExtension () {
       id: process.env.FIREFOX_API_UUID,
       sourceDir: path.resolve(__dirname, '..', 'dist', 'package')
     })
+    // rome-ignore lint/nursery/noConsoleLog: Printing response is good enough
     console.log(res)
   } catch (e) {
     if (e.message === 'The extension could not be signed') {
+      // rome-ignore lint/nursery/noConsoleLog: Printing using console is good enough 
       console.log(
         'The extension could not be signed, but it was probably published. Please see the logs. Firefox API is not really clear about this.'
       )

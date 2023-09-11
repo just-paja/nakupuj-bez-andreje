@@ -7,7 +7,7 @@ export function Banner () {
   return (
     <header className={styles.header}>
       <Container>
-        <img src='/andrej-pin.png' />
+        <img alt="Pin" src='/andrej-pin.png' />
       </Container>
     </header>
   )
