@@ -10,7 +10,7 @@
   "dependencies": {
     "agrofert-list": "file:../agrofert-list",
     "bootstrap": "^4.4.1",
-    "next": "13.4.19",
+    "next": "13.5.0",
     "react-bootstrap": "^1.0.0"
   },
   "files": [
